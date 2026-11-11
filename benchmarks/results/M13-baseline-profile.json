@@ -1,0 +1,1976 @@
+{
+  "schema_version": 1,
+  "environment": {
+    "python": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "machine": "AMD64",
+    "cpu": "Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz",
+    "logical_cpus": 8,
+    "clock": "perf_counter_ns",
+    "rss_probe": "Windows GetProcessMemoryInfo WorkingSet/PeakWorkingSet",
+    "pid": 7356,
+    "physical_ram_bytes": 16940797952
+  },
+  "settings": {
+    "samples": 3,
+    "operations": 20,
+    "warmup": 4,
+    "minimum_seconds": 0.15
+  },
+  "suite": "profile",
+  "git_revision": "c6306a6d98a68c1d9e0920f11080b712f390a0e7",
+  "rows": [],
+  "profiles": [
+    {
+      "name": "zadd_update",
+      "size": 64,
+      "operations": 200,
+      "warmup_operations": 10,
+      "seconds": 0.02054179999686312,
+      "top_cumulative": [
+        {
+          "file": "profiling.py",
+          "line": 30,
+          "function": "operation",
+          "calls": 200,
+          "self_seconds": 0.0005188,
+          "cumulative_seconds": 0.018923500000000003
+        },
+        {
+          "file": "executor.py",
+          "line": 100,
+          "function": "execute",
+          "calls": 200,
+          "self_seconds": 0.0003502,
+          "cumulative_seconds": 0.018213800000000002
+        },
+        {
+          "file": "executor.py",
+          "line": 120,
+          "function": "_execute",
+          "calls": 200,
+          "self_seconds": 0.0007533,
+          "cumulative_seconds": 0.0177088
+        },
+        {
+          "file": "transactions.py",
+          "line": 70,
+          "function": "run",
+          "calls": 200,
+          "self_seconds": 0.0003836,
+          "cumulative_seconds": 0.0145383
+        },
+        {
+          "file": "executor.py",
+          "line": 132,
+          "function": "_dispatch",
+          "calls": 200,
+          "self_seconds": 0.0002276,
+          "cumulative_seconds": 0.013421700000000002
+        },
+        {
+          "file": "registry.py",
+          "line": 86,
+          "function": "dispatch",
+          "calls": 200,
+          "self_seconds": 0.0005693,
+          "cumulative_seconds": 0.0131476
+        },
+        {
+          "file": "sorted_sets.py",
+          "line": 15,
+          "function": "zadd",
+          "calls": 200,
+          "self_seconds": 0.0023892,
+          "cumulative_seconds": 0.0116675
+        },
+        {
+          "file": "store.py",
+          "line": 212,
+          "function": "put",
+          "calls": 200,
+          "self_seconds": 0.0009967,
+          "cumulative_seconds": 0.0030583000000000003
+        },
+        {
+          "file": "scores.py",
+          "line": 16,
+          "function": "parse_score",
+          "calls": 200,
+          "self_seconds": 0.0010606,
+          "cumulative_seconds": 0.0017861
+        },
+        {
+          "file": "registry.py",
+          "line": 70,
+          "function": "resolve",
+          "calls": 400,
+          "self_seconds": 0.0007774,
+          "cumulative_seconds": 0.0012098
+        },
+        {
+          "file": "store.py",
+          "line": 80,
+          "function": "check_growth",
+          "calls": 200,
+          "self_seconds": 0.0003188,
+          "cumulative_seconds": 0.0009954
+        },
+        {
+          "file": "store.py",
+          "line": 172,
+          "function": "get",
+          "calls": 600,
+          "self_seconds": 0.00042370000000000005,
+          "cumulative_seconds": 0.0009278000000000001
+        },
+        {
+          "file": "contextlib.py",
+          "line": 303,
+          "function": "helper",
+          "calls": 400,
+          "self_seconds": 0.0003525,
+          "cumulative_seconds": 0.0009263
+        },
+        {
+          "file": "store.py",
+          "line": 61,
+          "function": "value_charge",
+          "calls": 200,
+          "self_seconds": 0.00040500000000000003,
+          "cumulative_seconds": 0.0009159000000000001
+        },
+        {
+          "file": "registry.py",
+          "line": 34,
+          "function": "result_size",
+          "calls": 200,
+          "self_seconds": 0.00023920000000000001,
+          "cumulative_seconds": 0.0007294000000000001
+        }
+      ],
+      "correctness": "passed"
+    },
+    {
+      "name": "zrange_10_scores",
+      "size": 64,
+      "operations": 200,
+      "warmup_operations": 10,
+      "seconds": 0.4240390999984811,
+      "top_cumulative": [
+        {
+          "file": "profiling.py",
+          "line": 30,
+          "function": "operation",
+          "calls": 200,
+          "self_seconds": 0.000919,
+          "cumulative_seconds": 0.423453
+        },
+        {
+          "file": "executor.py",
+          "line": 100,
+          "function": "execute",
+          "calls": 200,
+          "self_seconds": 0.0005692000000000001,
+          "cumulative_seconds": 0.4221398
+        },
+        {
+          "file": "executor.py",
+          "line": 120,
+          "function": "_execute",
+          "calls": 200,
+          "self_seconds": 0.0015599000000000001,
+          "cumulative_seconds": 0.4213601
+        },
+        {
+          "file": "transactions.py",
+          "line": 70,
+          "function": "run",
+          "calls": 200,
+          "self_seconds": 0.0006903,
+          "cumulative_seconds": 0.3991787
+        },
+        {
+          "file": "executor.py",
+          "line": 132,
+          "function": "_dispatch",
+          "calls": 200,
+          "self_seconds": 0.0003752,
+          "cumulative_seconds": 0.39735820000000005
+        },
+        {
+          "file": "registry.py",
+          "line": 86,
+          "function": "dispatch",
+          "calls": 200,
+          "self_seconds": 0.0015192,
+          "cumulative_seconds": 0.39692320000000003
+        },
+        {
+          "file": "sorted_sets.py",
+          "line": 59,
+          "function": "zrange",
+          "calls": 200,
+          "self_seconds": 0.0014817,
+          "cumulative_seconds": 0.39411860000000004
+        },
+        {
+          "file": "collection_helpers.py",
+          "line": 29,
+          "function": "checked_array",
+          "calls": 200,
+          "self_seconds": 0.011232800000000001,
+          "cumulative_seconds": 0.39012050000000004
+        },
+        {
+          "file": "sorted_sets.py",
+          "line": 74,
+          "function": "<genexpr>",
+          "calls": 4200,
+          "self_seconds": 0.0033387,
+          "cumulative_seconds": 0.37245740000000005
+        },
+        {
+          "file": "scores.py",
+          "line": 41,
+          "function": "score_bytes",
+          "calls": 2000,
+          "self_seconds": 0.0014094,
+          "cumulative_seconds": 0.36838750000000003
+        },
+        {
+          "file": "score_format.py",
+          "line": 81,
+          "function": "format_score",
+          "calls": 2000,
+          "self_seconds": 0.0107712,
+          "cumulative_seconds": 0.36697810000000003
+        },
+        {
+          "file": "score_format.py",
+          "line": 59,
+          "function": "_digits",
+          "calls": 2000,
+          "self_seconds": 0.023718600000000003,
+          "cumulative_seconds": 0.35184790000000005
+        },
+        {
+          "file": "score_format.py",
+          "line": 39,
+          "function": "_interval",
+          "calls": 2000,
+          "self_seconds": 0.040338200000000005,
+          "cumulative_seconds": 0.2647493
+        },
+        {
+          "file": "fractions.py",
+          "line": 697,
+          "function": "forward",
+          "calls": 20000,
+          "self_seconds": 0.0204292,
+          "cumulative_seconds": 0.09660170000000001
+        },
+        {
+          "file": "fractions.py",
+          "line": 206,
+          "function": "__new__",
+          "calls": 34000,
+          "self_seconds": 0.046484300000000006,
+          "cumulative_seconds": 0.0709715
+        }
+      ],
+      "correctness": "passed"
+    },
+    {
+      "name": "zrange_full_scores",
+      "size": 64,
+      "operations": 10,
+      "warmup_operations": 10,
+      "seconds": 0.12917269999888958,
+      "top_cumulative": [
+        {
+          "file": "profiling.py",
+          "line": 30,
+          "function": "operation",
+          "calls": 10,
+          "self_seconds": 6.110000000000001e-05,
+          "cumulative_seconds": 0.12893980000000002
+        },
+        {
+          "file": "executor.py",
+          "line": 100,
+          "function": "execute",
+          "calls": 10,
+          "self_seconds": 3.69e-05,
+          "cumulative_seconds": 0.1288604
+        },
+        {
+          "file": "executor.py",
+          "line": 120,
+          "function": "_execute",
+          "calls": 10,
+          "self_seconds": 0.0001151,
+          "cumulative_seconds": 0.1288108
+        },
+        {
+          "file": "transactions.py",
+          "line": 70,
+          "function": "run",
+          "calls": 10,
+          "self_seconds": 7.350000000000001e-05,
+          "cumulative_seconds": 0.1240215
+        },
+        {
+          "file": "executor.py",
+          "line": 132,
+          "function": "_dispatch",
+          "calls": 10,
+          "self_seconds": 3.03e-05,
+          "cumulative_seconds": 0.12385570000000001
+        },
+        {
+          "file": "registry.py",
+          "line": 86,
+          "function": "dispatch",
+          "calls": 10,
+          "self_seconds": 0.000132,
+          "cumulative_seconds": 0.123822
+        },
+        {
+          "file": "sorted_sets.py",
+          "line": 59,
+          "function": "zrange",
+          "calls": 10,
+          "self_seconds": 0.0001084,
+          "cumulative_seconds": 0.1236015
+        },
+        {
+          "file": "collection_helpers.py",
+          "line": 29,
+          "function": "checked_array",
+          "calls": 10,
+          "self_seconds": 0.0033589,
+          "cumulative_seconds": 0.1233341
+        },
+        {
+          "file": "sorted_sets.py",
+          "line": 74,
+          "function": "<genexpr>",
+          "calls": 1290,
+          "self_seconds": 0.0009964000000000002,
+          "cumulative_seconds": 0.11801420000000001
+        },
+        {
+          "file": "scores.py",
+          "line": 41,
+          "function": "score_bytes",
+          "calls": 640,
+          "self_seconds": 0.00044300000000000003,
+          "cumulative_seconds": 0.1167769
+        },
+        {
+          "file": "score_format.py",
+          "line": 81,
+          "function": "format_score",
+          "calls": 640,
+          "self_seconds": 0.0033074000000000003,
+          "cumulative_seconds": 0.1163339
+        },
+        {
+          "file": "score_format.py",
+          "line": 59,
+          "function": "_digits",
+          "calls": 640,
+          "self_seconds": 0.007428000000000001,
+          "cumulative_seconds": 0.11166680000000001
+        },
+        {
+          "file": "score_format.py",
+          "line": 39,
+          "function": "_interval",
+          "calls": 640,
+          "self_seconds": 0.012764300000000001,
+          "cumulative_seconds": 0.0839618
+        },
+        {
+          "file": "fractions.py",
+          "line": 697,
+          "function": "forward",
+          "calls": 6400,
+          "self_seconds": 0.0065298000000000005,
+          "cumulative_seconds": 0.0307521
+        },
+        {
+          "file": "fractions.py",
+          "line": 206,
+          "function": "__new__",
+          "calls": 10880,
+          "self_seconds": 0.014960800000000002,
+          "cumulative_seconds": 0.022690500000000002
+        }
+      ],
+      "correctness": "passed"
+    },
+    {
+      "name": "hset_replace",
+      "size": 64,
+      "operations": 200,
+      "warmup_operations": 10,
+      "seconds": 0.013484200004313607,
+      "top_cumulative": [
+        {
+          "file": "profiling.py",
+          "line": 30,
+          "function": "operation",
+          "calls": 200,
+          "self_seconds": 0.00032,
+          "cumulative_seconds": 0.013286200000000001
+        },
+        {
+          "file": "executor.py",
+          "line": 100,
+          "function": "execute",
+          "calls": 200,
+          "self_seconds": 0.0002994,
+          "cumulative_seconds": 0.0128429
+        },
+        {
+          "file": "executor.py",
+          "line": 120,
+          "function": "_execute",
+          "calls": 200,
+          "self_seconds": 0.0006864000000000001,
+          "cumulative_seconds": 0.012396500000000001
+        },
+        {
+          "file": "transactions.py",
+          "line": 70,
+          "function": "run",
+          "calls": 200,
+          "self_seconds": 0.00033140000000000003,
+          "cumulative_seconds": 0.0095869
+        },
+        {
+          "file": "executor.py",
+          "line": 132,
+          "function": "_dispatch",
+          "calls": 200,
+          "self_seconds": 0.00020710000000000002,
+          "cumulative_seconds": 0.008727
+        },
+        {
+          "file": "registry.py",
+          "line": 86,
+          "function": "dispatch",
+          "calls": 200,
+          "self_seconds": 0.0004954,
+          "cumulative_seconds": 0.008480300000000001
+        },
+        {
+          "file": "hashes.py",
+          "line": 13,
+          "function": "hset",
+          "calls": 200,
+          "self_seconds": 0.0019128,
+          "cumulative_seconds": 0.007229200000000001
+        },
+        {
+          "file": "store.py",
+          "line": 212,
+          "function": "put",
+          "calls": 200,
+          "self_seconds": 0.0007725000000000001,
+          "cumulative_seconds": 0.0023179000000000003
+        },
+        {
+          "file": "registry.py",
+          "line": 70,
+          "function": "resolve",
+          "calls": 400,
+          "self_seconds": 0.0005314,
+          "cumulative_seconds": 0.0009098000000000001
+        },
+        {
+          "file": "store.py",
+          "line": 80,
+          "function": "check_growth",
+          "calls": 200,
+          "self_seconds": 0.00029130000000000003,
+          "cumulative_seconds": 0.0008690000000000001
+        },
+        {
+          "file": "store.py",
+          "line": 172,
+          "function": "get",
+          "calls": 600,
+          "self_seconds": 0.0003735,
+          "cumulative_seconds": 0.0008223000000000001
+        },
+        {
+          "file": "contextlib.py",
+          "line": 303,
+          "function": "helper",
+          "calls": 400,
+          "self_seconds": 0.00031140000000000003,
+          "cumulative_seconds": 0.0007636
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'get' of 'dict' objects>",
+          "calls": 3200,
+          "self_seconds": 0.000656,
+          "cumulative_seconds": 0.000656
+        },
+        {
+          "file": "registry.py",
+          "line": 34,
+          "function": "result_size",
+          "calls": 200,
+          "self_seconds": 0.0002001,
+          "cumulative_seconds": 0.0006384
+        },
+        {
+          "file": "contextlib.py",
+          "line": 145,
+          "function": "__exit__",
+          "calls": 400,
+          "self_seconds": 0.00023920000000000001,
+          "cumulative_seconds": 0.0005574
+        }
+      ],
+      "correctness": "passed"
+    },
+    {
+      "name": "dbsize",
+      "size": 64,
+      "operations": 200,
+      "warmup_operations": 10,
+      "seconds": 0.02011069999571191,
+      "top_cumulative": [
+        {
+          "file": "profiling.py",
+          "line": 30,
+          "function": "operation",
+          "calls": 200,
+          "self_seconds": 0.0004426,
+          "cumulative_seconds": 0.019929000000000002
+        },
+        {
+          "file": "executor.py",
+          "line": 100,
+          "function": "execute",
+          "calls": 200,
+          "self_seconds": 0.0002814,
+          "cumulative_seconds": 0.019267700000000002
+        },
+        {
+          "file": "executor.py",
+          "line": 120,
+          "function": "_execute",
+          "calls": 200,
+          "self_seconds": 0.0006945,
+          "cumulative_seconds": 0.0188338
+        },
+        {
+          "file": "transactions.py",
+          "line": 70,
+          "function": "run",
+          "calls": 200,
+          "self_seconds": 0.0003075,
+          "cumulative_seconds": 0.016038900000000002
+        },
+        {
+          "file": "executor.py",
+          "line": 132,
+          "function": "_dispatch",
+          "calls": 200,
+          "self_seconds": 0.0001957,
+          "cumulative_seconds": 0.0151938
+        },
+        {
+          "file": "registry.py",
+          "line": 86,
+          "function": "dispatch",
+          "calls": 200,
+          "self_seconds": 0.0004462,
+          "cumulative_seconds": 0.0149577
+        },
+        {
+          "file": "keyspace.py",
+          "line": 23,
+          "function": "dbsize",
+          "calls": 200,
+          "self_seconds": 0.0001819,
+          "cumulative_seconds": 0.0137087
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method builtins.len>",
+          "calls": 800,
+          "self_seconds": 0.00029570000000000003,
+          "cumulative_seconds": 0.013526400000000001
+        },
+        {
+          "file": "store.py",
+          "line": 311,
+          "function": "__len__",
+          "calls": 200,
+          "self_seconds": 0.00021700000000000002,
+          "cumulative_seconds": 0.013230700000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method builtins.sum>",
+          "calls": 400,
+          "self_seconds": 0.002294,
+          "cumulative_seconds": 0.013021300000000001
+        },
+        {
+          "file": "store.py",
+          "line": 313,
+          "function": "<genexpr>",
+          "calls": 13400,
+          "self_seconds": 0.004893300000000001,
+          "cumulative_seconds": 0.0107273
+        },
+        {
+          "file": "expiration.py",
+          "line": 13,
+          "function": "deadline",
+          "calls": 13200,
+          "self_seconds": 0.0038272000000000002,
+          "cumulative_seconds": 0.005834000000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'get' of 'dict' objects>",
+          "calls": 13600,
+          "self_seconds": 0.0021012,
+          "cumulative_seconds": 0.0021012
+        },
+        {
+          "file": "registry.py",
+          "line": 70,
+          "function": "resolve",
+          "calls": 400,
+          "self_seconds": 0.000539,
+          "cumulative_seconds": 0.0009381000000000001
+        },
+        {
+          "file": "registry.py",
+          "line": 34,
+          "function": "result_size",
+          "calls": 200,
+          "self_seconds": 0.00019910000000000001,
+          "cumulative_seconds": 0.0006311
+        }
+      ],
+      "correctness": "passed"
+    },
+    {
+      "name": "zadd_update",
+      "size": 512,
+      "operations": 200,
+      "warmup_operations": 10,
+      "seconds": 0.01737219999631634,
+      "top_cumulative": [
+        {
+          "file": "profiling.py",
+          "line": 30,
+          "function": "operation",
+          "calls": 200,
+          "self_seconds": 0.00043380000000000003,
+          "cumulative_seconds": 0.0171746
+        },
+        {
+          "file": "executor.py",
+          "line": 100,
+          "function": "execute",
+          "calls": 200,
+          "self_seconds": 0.0003152,
+          "cumulative_seconds": 0.016544100000000003
+        },
+        {
+          "file": "executor.py",
+          "line": 120,
+          "function": "_execute",
+          "calls": 200,
+          "self_seconds": 0.0006938000000000001,
+          "cumulative_seconds": 0.01607
+        },
+        {
+          "file": "transactions.py",
+          "line": 70,
+          "function": "run",
+          "calls": 200,
+          "self_seconds": 0.0003303,
+          "cumulative_seconds": 0.0132387
+        },
+        {
+          "file": "executor.py",
+          "line": 132,
+          "function": "_dispatch",
+          "calls": 200,
+          "self_seconds": 0.00020910000000000001,
+          "cumulative_seconds": 0.0123789
+        },
+        {
+          "file": "registry.py",
+          "line": 86,
+          "function": "dispatch",
+          "calls": 200,
+          "self_seconds": 0.0005593,
+          "cumulative_seconds": 0.012130700000000001
+        },
+        {
+          "file": "sorted_sets.py",
+          "line": 15,
+          "function": "zadd",
+          "calls": 200,
+          "self_seconds": 0.0020866,
+          "cumulative_seconds": 0.010842200000000001
+        },
+        {
+          "file": "store.py",
+          "line": 212,
+          "function": "put",
+          "calls": 200,
+          "self_seconds": 0.0011592,
+          "cumulative_seconds": 0.0030077000000000003
+        },
+        {
+          "file": "scores.py",
+          "line": 16,
+          "function": "parse_score",
+          "calls": 200,
+          "self_seconds": 0.0008331,
+          "cumulative_seconds": 0.0014265
+        },
+        {
+          "file": "registry.py",
+          "line": 70,
+          "function": "resolve",
+          "calls": 400,
+          "self_seconds": 0.0005287,
+          "cumulative_seconds": 0.0008905
+        },
+        {
+          "file": "store.py",
+          "line": 80,
+          "function": "check_growth",
+          "calls": 200,
+          "self_seconds": 0.0002653,
+          "cumulative_seconds": 0.000839
+        },
+        {
+          "file": "store.py",
+          "line": 61,
+          "function": "value_charge",
+          "calls": 200,
+          "self_seconds": 0.00035850000000000004,
+          "cumulative_seconds": 0.0008136
+        },
+        {
+          "file": "store.py",
+          "line": 172,
+          "function": "get",
+          "calls": 600,
+          "self_seconds": 0.0003577,
+          "cumulative_seconds": 0.0007828
+        },
+        {
+          "file": "contextlib.py",
+          "line": 303,
+          "function": "helper",
+          "calls": 400,
+          "self_seconds": 0.00030060000000000004,
+          "cumulative_seconds": 0.0007729000000000001
+        },
+        {
+          "file": "registry.py",
+          "line": 34,
+          "function": "result_size",
+          "calls": 200,
+          "self_seconds": 0.0002332,
+          "cumulative_seconds": 0.0006618
+        }
+      ],
+      "correctness": "passed"
+    },
+    {
+      "name": "zrange_10_scores",
+      "size": 512,
+      "operations": 200,
+      "warmup_operations": 10,
+      "seconds": 0.36336889999802224,
+      "top_cumulative": [
+        {
+          "file": "profiling.py",
+          "line": 30,
+          "function": "operation",
+          "calls": 200,
+          "self_seconds": 0.0008497,
+          "cumulative_seconds": 0.36286250000000003
+        },
+        {
+          "file": "executor.py",
+          "line": 100,
+          "function": "execute",
+          "calls": 200,
+          "self_seconds": 0.0004939,
+          "cumulative_seconds": 0.3616433
+        },
+        {
+          "file": "executor.py",
+          "line": 120,
+          "function": "_execute",
+          "calls": 200,
+          "self_seconds": 0.0012751000000000001,
+          "cumulative_seconds": 0.36096690000000003
+        },
+        {
+          "file": "transactions.py",
+          "line": 70,
+          "function": "run",
+          "calls": 200,
+          "self_seconds": 0.0005959,
+          "cumulative_seconds": 0.3423398
+        },
+        {
+          "file": "executor.py",
+          "line": 132,
+          "function": "_dispatch",
+          "calls": 200,
+          "self_seconds": 0.0003411,
+          "cumulative_seconds": 0.3407336
+        },
+        {
+          "file": "registry.py",
+          "line": 86,
+          "function": "dispatch",
+          "calls": 200,
+          "self_seconds": 0.0011091,
+          "cumulative_seconds": 0.3403388
+        },
+        {
+          "file": "sorted_sets.py",
+          "line": 59,
+          "function": "zrange",
+          "calls": 200,
+          "self_seconds": 0.0013384,
+          "cumulative_seconds": 0.3381111
+        },
+        {
+          "file": "collection_helpers.py",
+          "line": 29,
+          "function": "checked_array",
+          "calls": 200,
+          "self_seconds": 0.0097576,
+          "cumulative_seconds": 0.3345075
+        },
+        {
+          "file": "sorted_sets.py",
+          "line": 74,
+          "function": "<genexpr>",
+          "calls": 4200,
+          "self_seconds": 0.0028779,
+          "cumulative_seconds": 0.31930050000000004
+        },
+        {
+          "file": "scores.py",
+          "line": 41,
+          "function": "score_bytes",
+          "calls": 2000,
+          "self_seconds": 0.0012538,
+          "cumulative_seconds": 0.3157939
+        },
+        {
+          "file": "score_format.py",
+          "line": 81,
+          "function": "format_score",
+          "calls": 2000,
+          "self_seconds": 0.0095229,
+          "cumulative_seconds": 0.31454010000000004
+        },
+        {
+          "file": "score_format.py",
+          "line": 59,
+          "function": "_digits",
+          "calls": 2000,
+          "self_seconds": 0.0204411,
+          "cumulative_seconds": 0.3013823
+        },
+        {
+          "file": "score_format.py",
+          "line": 39,
+          "function": "_interval",
+          "calls": 2000,
+          "self_seconds": 0.0342546,
+          "cumulative_seconds": 0.2261051
+        },
+        {
+          "file": "fractions.py",
+          "line": 697,
+          "function": "forward",
+          "calls": 20000,
+          "self_seconds": 0.017386000000000002,
+          "cumulative_seconds": 0.08314980000000001
+        },
+        {
+          "file": "fractions.py",
+          "line": 206,
+          "function": "__new__",
+          "calls": 34000,
+          "self_seconds": 0.039790200000000005,
+          "cumulative_seconds": 0.0605093
+        }
+      ],
+      "correctness": "passed"
+    },
+    {
+      "name": "zrange_full_scores",
+      "size": 512,
+      "operations": 10,
+      "warmup_operations": 10,
+      "seconds": 0.8402082999964477,
+      "top_cumulative": [
+        {
+          "file": "profiling.py",
+          "line": 30,
+          "function": "operation",
+          "calls": 10,
+          "self_seconds": 7.47e-05,
+          "cumulative_seconds": 0.8396234
+        },
+        {
+          "file": "executor.py",
+          "line": 100,
+          "function": "execute",
+          "calls": 10,
+          "self_seconds": 4.07e-05,
+          "cumulative_seconds": 0.8395276
+        },
+        {
+          "file": "executor.py",
+          "line": 120,
+          "function": "_execute",
+          "calls": 10,
+          "self_seconds": 0.00013240000000000002,
+          "cumulative_seconds": 0.8394733000000001
+        },
+        {
+          "file": "transactions.py",
+          "line": 70,
+          "function": "run",
+          "calls": 10,
+          "self_seconds": 5.1200000000000004e-05,
+          "cumulative_seconds": 0.8101821
+        },
+        {
+          "file": "executor.py",
+          "line": 132,
+          "function": "_dispatch",
+          "calls": 10,
+          "self_seconds": 2.8100000000000002e-05,
+          "cumulative_seconds": 0.8100267000000001
+        },
+        {
+          "file": "registry.py",
+          "line": 86,
+          "function": "dispatch",
+          "calls": 10,
+          "self_seconds": 0.0001017,
+          "cumulative_seconds": 0.8099959000000001
+        },
+        {
+          "file": "sorted_sets.py",
+          "line": 59,
+          "function": "zrange",
+          "calls": 10,
+          "self_seconds": 0.0001269,
+          "cumulative_seconds": 0.8098121
+        },
+        {
+          "file": "collection_helpers.py",
+          "line": 29,
+          "function": "checked_array",
+          "calls": 10,
+          "self_seconds": 0.021708500000000002,
+          "cumulative_seconds": 0.8095225
+        },
+        {
+          "file": "sorted_sets.py",
+          "line": 74,
+          "function": "<genexpr>",
+          "calls": 10250,
+          "self_seconds": 0.0065284,
+          "cumulative_seconds": 0.7752678000000001
+        },
+        {
+          "file": "scores.py",
+          "line": 41,
+          "function": "score_bytes",
+          "calls": 5120,
+          "self_seconds": 0.0029995,
+          "cumulative_seconds": 0.7670951
+        },
+        {
+          "file": "score_format.py",
+          "line": 81,
+          "function": "format_score",
+          "calls": 5120,
+          "self_seconds": 0.022314300000000002,
+          "cumulative_seconds": 0.7640956000000001
+        },
+        {
+          "file": "score_format.py",
+          "line": 59,
+          "function": "_digits",
+          "calls": 5120,
+          "self_seconds": 0.0496389,
+          "cumulative_seconds": 0.7328596
+        },
+        {
+          "file": "score_format.py",
+          "line": 39,
+          "function": "_interval",
+          "calls": 5120,
+          "self_seconds": 0.0837707,
+          "cumulative_seconds": 0.5484665000000001
+        },
+        {
+          "file": "fractions.py",
+          "line": 697,
+          "function": "forward",
+          "calls": 51200,
+          "self_seconds": 0.042649700000000006,
+          "cumulative_seconds": 0.2013938
+        },
+        {
+          "file": "fractions.py",
+          "line": 206,
+          "function": "__new__",
+          "calls": 87040,
+          "self_seconds": 0.0973587,
+          "cumulative_seconds": 0.14768920000000002
+        }
+      ],
+      "correctness": "passed"
+    },
+    {
+      "name": "hset_replace",
+      "size": 512,
+      "operations": 200,
+      "warmup_operations": 10,
+      "seconds": 0.01569759999983944,
+      "top_cumulative": [
+        {
+          "file": "profiling.py",
+          "line": 30,
+          "function": "operation",
+          "calls": 200,
+          "self_seconds": 0.00036960000000000004,
+          "cumulative_seconds": 0.0154339
+        },
+        {
+          "file": "executor.py",
+          "line": 100,
+          "function": "execute",
+          "calls": 200,
+          "self_seconds": 0.00034300000000000004,
+          "cumulative_seconds": 0.014933
+        },
+        {
+          "file": "executor.py",
+          "line": 120,
+          "function": "_execute",
+          "calls": 200,
+          "self_seconds": 0.0007527,
+          "cumulative_seconds": 0.014434800000000001
+        },
+        {
+          "file": "transactions.py",
+          "line": 70,
+          "function": "run",
+          "calls": 200,
+          "self_seconds": 0.00035840000000000004,
+          "cumulative_seconds": 0.011318400000000001
+        },
+        {
+          "file": "executor.py",
+          "line": 132,
+          "function": "_dispatch",
+          "calls": 200,
+          "self_seconds": 0.0002254,
+          "cumulative_seconds": 0.0103649
+        },
+        {
+          "file": "registry.py",
+          "line": 86,
+          "function": "dispatch",
+          "calls": 200,
+          "self_seconds": 0.000545,
+          "cumulative_seconds": 0.0100961
+        },
+        {
+          "file": "hashes.py",
+          "line": 13,
+          "function": "hset",
+          "calls": 200,
+          "self_seconds": 0.0020285,
+          "cumulative_seconds": 0.0087329
+        },
+        {
+          "file": "store.py",
+          "line": 212,
+          "function": "put",
+          "calls": 200,
+          "self_seconds": 0.0011381000000000002,
+          "cumulative_seconds": 0.002954
+        },
+        {
+          "file": "registry.py",
+          "line": 70,
+          "function": "resolve",
+          "calls": 400,
+          "self_seconds": 0.0005971,
+          "cumulative_seconds": 0.0009944
+        },
+        {
+          "file": "store.py",
+          "line": 80,
+          "function": "check_growth",
+          "calls": 200,
+          "self_seconds": 0.000304,
+          "cumulative_seconds": 0.0009462
+        },
+        {
+          "file": "store.py",
+          "line": 172,
+          "function": "get",
+          "calls": 600,
+          "self_seconds": 0.00042370000000000005,
+          "cumulative_seconds": 0.0008942
+        },
+        {
+          "file": "contextlib.py",
+          "line": 303,
+          "function": "helper",
+          "calls": 400,
+          "self_seconds": 0.0003661,
+          "cumulative_seconds": 0.0008813
+        },
+        {
+          "file": "registry.py",
+          "line": 34,
+          "function": "result_size",
+          "calls": 200,
+          "self_seconds": 0.0002376,
+          "cumulative_seconds": 0.0007438000000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'get' of 'dict' objects>",
+          "calls": 3200,
+          "self_seconds": 0.0007139000000000001,
+          "cumulative_seconds": 0.0007139000000000001
+        },
+        {
+          "file": "store.py",
+          "line": 61,
+          "function": "value_charge",
+          "calls": 200,
+          "self_seconds": 0.0002797,
+          "cumulative_seconds": 0.0006553
+        }
+      ],
+      "correctness": "passed"
+    },
+    {
+      "name": "dbsize",
+      "size": 512,
+      "operations": 200,
+      "warmup_operations": 10,
+      "seconds": 0.1170951000021887,
+      "top_cumulative": [
+        {
+          "file": "profiling.py",
+          "line": 30,
+          "function": "operation",
+          "calls": 200,
+          "self_seconds": 0.0006056000000000001,
+          "cumulative_seconds": 0.1168364
+        },
+        {
+          "file": "executor.py",
+          "line": 100,
+          "function": "execute",
+          "calls": 200,
+          "self_seconds": 0.0003888,
+          "cumulative_seconds": 0.1159714
+        },
+        {
+          "file": "executor.py",
+          "line": 120,
+          "function": "_execute",
+          "calls": 200,
+          "self_seconds": 0.000921,
+          "cumulative_seconds": 0.11542000000000001
+        },
+        {
+          "file": "transactions.py",
+          "line": 70,
+          "function": "run",
+          "calls": 200,
+          "self_seconds": 0.0004201,
+          "cumulative_seconds": 0.11160750000000001
+        },
+        {
+          "file": "executor.py",
+          "line": 132,
+          "function": "_dispatch",
+          "calls": 200,
+          "self_seconds": 0.00024900000000000004,
+          "cumulative_seconds": 0.11048290000000001
+        },
+        {
+          "file": "registry.py",
+          "line": 86,
+          "function": "dispatch",
+          "calls": 200,
+          "self_seconds": 0.0006486,
+          "cumulative_seconds": 0.11018720000000001
+        },
+        {
+          "file": "keyspace.py",
+          "line": 23,
+          "function": "dbsize",
+          "calls": 200,
+          "self_seconds": 0.00028270000000000004,
+          "cumulative_seconds": 0.1086102
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method builtins.len>",
+          "calls": 800,
+          "self_seconds": 0.00034930000000000003,
+          "cumulative_seconds": 0.10832820000000001
+        },
+        {
+          "file": "store.py",
+          "line": 311,
+          "function": "__len__",
+          "calls": 200,
+          "self_seconds": 0.0003212,
+          "cumulative_seconds": 0.1079789
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method builtins.sum>",
+          "calls": 400,
+          "self_seconds": 0.01793,
+          "cumulative_seconds": 0.10768280000000001
+        },
+        {
+          "file": "store.py",
+          "line": 313,
+          "function": "<genexpr>",
+          "calls": 103000,
+          "self_seconds": 0.040571800000000005,
+          "cumulative_seconds": 0.08975280000000001
+        },
+        {
+          "file": "expiration.py",
+          "line": 13,
+          "function": "deadline",
+          "calls": 102800,
+          "self_seconds": 0.0319494,
+          "cumulative_seconds": 0.049181
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'get' of 'dict' objects>",
+          "calls": 103200,
+          "self_seconds": 0.017355000000000002,
+          "cumulative_seconds": 0.017355000000000002
+        },
+        {
+          "file": "registry.py",
+          "line": 70,
+          "function": "resolve",
+          "calls": 400,
+          "self_seconds": 0.0006705000000000001,
+          "cumulative_seconds": 0.0011400000000000002
+        },
+        {
+          "file": "registry.py",
+          "line": 34,
+          "function": "result_size",
+          "calls": 200,
+          "self_seconds": 0.0002785,
+          "cumulative_seconds": 0.0008686000000000001
+        }
+      ],
+      "correctness": "passed"
+    },
+    {
+      "name": "zadd_update",
+      "size": 4096,
+      "operations": 200,
+      "warmup_operations": 10,
+      "seconds": 0.030254499994043726,
+      "top_cumulative": [
+        {
+          "file": "profiling.py",
+          "line": 30,
+          "function": "operation",
+          "calls": 200,
+          "self_seconds": 0.0005088,
+          "cumulative_seconds": 0.0300195
+        },
+        {
+          "file": "executor.py",
+          "line": 100,
+          "function": "execute",
+          "calls": 200,
+          "self_seconds": 0.00034260000000000003,
+          "cumulative_seconds": 0.029325900000000002
+        },
+        {
+          "file": "executor.py",
+          "line": 120,
+          "function": "_execute",
+          "calls": 200,
+          "self_seconds": 0.0008289,
+          "cumulative_seconds": 0.028832600000000003
+        },
+        {
+          "file": "transactions.py",
+          "line": 70,
+          "function": "run",
+          "calls": 200,
+          "self_seconds": 0.00040540000000000004,
+          "cumulative_seconds": 0.025510900000000003
+        },
+        {
+          "file": "executor.py",
+          "line": 132,
+          "function": "_dispatch",
+          "calls": 200,
+          "self_seconds": 0.0002289,
+          "cumulative_seconds": 0.0244801
+        },
+        {
+          "file": "registry.py",
+          "line": 86,
+          "function": "dispatch",
+          "calls": 200,
+          "self_seconds": 0.0006296,
+          "cumulative_seconds": 0.0242063
+        },
+        {
+          "file": "sorted_sets.py",
+          "line": 15,
+          "function": "zadd",
+          "calls": 200,
+          "self_seconds": 0.0026816,
+          "cumulative_seconds": 0.022737200000000003
+        },
+        {
+          "file": "store.py",
+          "line": 212,
+          "function": "put",
+          "calls": 200,
+          "self_seconds": 0.005633600000000001,
+          "cumulative_seconds": 0.0077567
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'copy' of 'dict' objects>",
+          "calls": 200,
+          "self_seconds": 0.0040515,
+          "cumulative_seconds": 0.0040515
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'copy' of 'list' objects>",
+          "calls": 200,
+          "self_seconds": 0.0020192,
+          "cumulative_seconds": 0.0020192
+        },
+        {
+          "file": "scores.py",
+          "line": 16,
+          "function": "parse_score",
+          "calls": 200,
+          "self_seconds": 0.0010162,
+          "cumulative_seconds": 0.0016559
+        },
+        {
+          "file": "collections.py",
+          "line": 38,
+          "function": "update",
+          "calls": 200,
+          "self_seconds": 0.0003843,
+          "cumulative_seconds": 0.0012087
+        },
+        {
+          "file": "registry.py",
+          "line": 70,
+          "function": "resolve",
+          "calls": 400,
+          "self_seconds": 0.0006066,
+          "cumulative_seconds": 0.0010355
+        },
+        {
+          "file": "store.py",
+          "line": 80,
+          "function": "check_growth",
+          "calls": 200,
+          "self_seconds": 0.00030960000000000004,
+          "cumulative_seconds": 0.0009782
+        },
+        {
+          "file": "store.py",
+          "line": 172,
+          "function": "get",
+          "calls": 600,
+          "self_seconds": 0.0004239,
+          "cumulative_seconds": 0.0009197000000000001
+        }
+      ],
+      "correctness": "passed"
+    },
+    {
+      "name": "zrange_10_scores",
+      "size": 4096,
+      "operations": 200,
+      "warmup_operations": 10,
+      "seconds": 0.3575390999976662,
+      "top_cumulative": [
+        {
+          "file": "profiling.py",
+          "line": 30,
+          "function": "operation",
+          "calls": 200,
+          "self_seconds": 0.0008624,
+          "cumulative_seconds": 0.35703110000000005
+        },
+        {
+          "file": "executor.py",
+          "line": 100,
+          "function": "execute",
+          "calls": 200,
+          "self_seconds": 0.0005158000000000001,
+          "cumulative_seconds": 0.35577250000000005
+        },
+        {
+          "file": "executor.py",
+          "line": 120,
+          "function": "_execute",
+          "calls": 200,
+          "self_seconds": 0.0012577,
+          "cumulative_seconds": 0.35507130000000003
+        },
+        {
+          "file": "transactions.py",
+          "line": 70,
+          "function": "run",
+          "calls": 200,
+          "self_seconds": 0.0006098000000000001,
+          "cumulative_seconds": 0.3364648
+        },
+        {
+          "file": "executor.py",
+          "line": 132,
+          "function": "_dispatch",
+          "calls": 200,
+          "self_seconds": 0.00033590000000000003,
+          "cumulative_seconds": 0.3348471
+        },
+        {
+          "file": "registry.py",
+          "line": 86,
+          "function": "dispatch",
+          "calls": 200,
+          "self_seconds": 0.0010653000000000001,
+          "cumulative_seconds": 0.334455
+        },
+        {
+          "file": "sorted_sets.py",
+          "line": 59,
+          "function": "zrange",
+          "calls": 200,
+          "self_seconds": 0.0013422,
+          "cumulative_seconds": 0.3322835
+        },
+        {
+          "file": "collection_helpers.py",
+          "line": 29,
+          "function": "checked_array",
+          "calls": 200,
+          "self_seconds": 0.0096133,
+          "cumulative_seconds": 0.3287195
+        },
+        {
+          "file": "sorted_sets.py",
+          "line": 74,
+          "function": "<genexpr>",
+          "calls": 4200,
+          "self_seconds": 0.0028252000000000004,
+          "cumulative_seconds": 0.3136548
+        },
+        {
+          "file": "scores.py",
+          "line": 41,
+          "function": "score_bytes",
+          "calls": 2000,
+          "self_seconds": 0.00119,
+          "cumulative_seconds": 0.3101918
+        },
+        {
+          "file": "score_format.py",
+          "line": 81,
+          "function": "format_score",
+          "calls": 2000,
+          "self_seconds": 0.0091652,
+          "cumulative_seconds": 0.3090018
+        },
+        {
+          "file": "score_format.py",
+          "line": 59,
+          "function": "_digits",
+          "calls": 2000,
+          "self_seconds": 0.0200654,
+          "cumulative_seconds": 0.29617570000000004
+        },
+        {
+          "file": "score_format.py",
+          "line": 39,
+          "function": "_interval",
+          "calls": 2000,
+          "self_seconds": 0.0340892,
+          "cumulative_seconds": 0.22246220000000003
+        },
+        {
+          "file": "fractions.py",
+          "line": 697,
+          "function": "forward",
+          "calls": 20000,
+          "self_seconds": 0.017127,
+          "cumulative_seconds": 0.08154130000000001
+        },
+        {
+          "file": "fractions.py",
+          "line": 206,
+          "function": "__new__",
+          "calls": 34000,
+          "self_seconds": 0.038832700000000005,
+          "cumulative_seconds": 0.0591855
+        }
+      ],
+      "correctness": "passed"
+    },
+    {
+      "name": "zrange_full_scores",
+      "size": 4096,
+      "operations": 10,
+      "warmup_operations": 10,
+      "seconds": 7.213761300001352,
+      "top_cumulative": [
+        {
+          "file": "profiling.py",
+          "line": 30,
+          "function": "operation",
+          "calls": 10,
+          "self_seconds": 8.680000000000001e-05,
+          "cumulative_seconds": 7.2105249
+        },
+        {
+          "file": "executor.py",
+          "line": 100,
+          "function": "execute",
+          "calls": 10,
+          "self_seconds": 4.7900000000000006e-05,
+          "cumulative_seconds": 7.2104131
+        },
+        {
+          "file": "executor.py",
+          "line": 120,
+          "function": "_execute",
+          "calls": 10,
+          "self_seconds": 0.00015470000000000002,
+          "cumulative_seconds": 7.210349000000001
+        },
+        {
+          "file": "transactions.py",
+          "line": 70,
+          "function": "run",
+          "calls": 10,
+          "self_seconds": 6e-05,
+          "cumulative_seconds": 6.9582882
+        },
+        {
+          "file": "executor.py",
+          "line": 132,
+          "function": "_dispatch",
+          "calls": 10,
+          "self_seconds": 3.07e-05,
+          "cumulative_seconds": 6.958138600000001
+        },
+        {
+          "file": "registry.py",
+          "line": 86,
+          "function": "dispatch",
+          "calls": 10,
+          "self_seconds": 0.00012150000000000001,
+          "cumulative_seconds": 6.958105000000001
+        },
+        {
+          "file": "sorted_sets.py",
+          "line": 59,
+          "function": "zrange",
+          "calls": 10,
+          "self_seconds": 0.0004127,
+          "cumulative_seconds": 6.9578911
+        },
+        {
+          "file": "collection_helpers.py",
+          "line": 29,
+          "function": "checked_array",
+          "calls": 10,
+          "self_seconds": 0.18706710000000001,
+          "cumulative_seconds": 6.957286300000001
+        },
+        {
+          "file": "sorted_sets.py",
+          "line": 74,
+          "function": "<genexpr>",
+          "calls": 81930,
+          "self_seconds": 0.0563147,
+          "cumulative_seconds": 6.6655236
+        },
+        {
+          "file": "scores.py",
+          "line": 41,
+          "function": "score_bytes",
+          "calls": 40960,
+          "self_seconds": 0.024718300000000002,
+          "cumulative_seconds": 6.594524300000001
+        },
+        {
+          "file": "score_format.py",
+          "line": 81,
+          "function": "format_score",
+          "calls": 40960,
+          "self_seconds": 0.194896,
+          "cumulative_seconds": 6.569806000000001
+        },
+        {
+          "file": "score_format.py",
+          "line": 59,
+          "function": "_digits",
+          "calls": 40960,
+          "self_seconds": 0.43194730000000003,
+          "cumulative_seconds": 6.2974353
+        },
+        {
+          "file": "score_format.py",
+          "line": 39,
+          "function": "_interval",
+          "calls": 40960,
+          "self_seconds": 0.7165252000000001,
+          "cumulative_seconds": 4.709814300000001
+        },
+        {
+          "file": "fractions.py",
+          "line": 697,
+          "function": "forward",
+          "calls": 409600,
+          "self_seconds": 0.3682861,
+          "cumulative_seconds": 1.7319135
+        },
+        {
+          "file": "fractions.py",
+          "line": 206,
+          "function": "__new__",
+          "calls": 696320,
+          "self_seconds": 0.8337583000000001,
+          "cumulative_seconds": 1.2648541
+        }
+      ],
+      "correctness": "passed"
+    },
+    {
+      "name": "hset_replace",
+      "size": 4096,
+      "operations": 200,
+      "warmup_operations": 10,
+      "seconds": 0.021971600006509107,
+      "top_cumulative": [
+        {
+          "file": "profiling.py",
+          "line": 30,
+          "function": "operation",
+          "calls": 200,
+          "self_seconds": 0.0003754,
+          "cumulative_seconds": 0.021735300000000003
+        },
+        {
+          "file": "executor.py",
+          "line": 100,
+          "function": "execute",
+          "calls": 200,
+          "self_seconds": 0.00035160000000000004,
+          "cumulative_seconds": 0.0212267
+        },
+        {
+          "file": "executor.py",
+          "line": 120,
+          "function": "_execute",
+          "calls": 200,
+          "self_seconds": 0.0007877,
+          "cumulative_seconds": 0.0207202
+        },
+        {
+          "file": "transactions.py",
+          "line": 70,
+          "function": "run",
+          "calls": 200,
+          "self_seconds": 0.00036270000000000003,
+          "cumulative_seconds": 0.017453100000000003
+        },
+        {
+          "file": "executor.py",
+          "line": 132,
+          "function": "_dispatch",
+          "calls": 200,
+          "self_seconds": 0.0002221,
+          "cumulative_seconds": 0.016470500000000002
+        },
+        {
+          "file": "registry.py",
+          "line": 86,
+          "function": "dispatch",
+          "calls": 200,
+          "self_seconds": 0.0005709,
+          "cumulative_seconds": 0.0162027
+        },
+        {
+          "file": "hashes.py",
+          "line": 13,
+          "function": "hset",
+          "calls": 200,
+          "self_seconds": 0.002183,
+          "cumulative_seconds": 0.0147741
+        },
+        {
+          "file": "store.py",
+          "line": 212,
+          "function": "put",
+          "calls": 200,
+          "self_seconds": 0.0035769,
+          "cumulative_seconds": 0.0054925
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'copy' of 'dict' objects>",
+          "calls": 200,
+          "self_seconds": 0.0038086,
+          "cumulative_seconds": 0.0038086
+        },
+        {
+          "file": "registry.py",
+          "line": 70,
+          "function": "resolve",
+          "calls": 400,
+          "self_seconds": 0.0006201000000000001,
+          "cumulative_seconds": 0.0010428
+        },
+        {
+          "file": "store.py",
+          "line": 80,
+          "function": "check_growth",
+          "calls": 200,
+          "self_seconds": 0.0003217,
+          "cumulative_seconds": 0.0009689000000000001
+        },
+        {
+          "file": "store.py",
+          "line": 172,
+          "function": "get",
+          "calls": 600,
+          "self_seconds": 0.0004355,
+          "cumulative_seconds": 0.0009308000000000001
+        },
+        {
+          "file": "contextlib.py",
+          "line": 303,
+          "function": "helper",
+          "calls": 400,
+          "self_seconds": 0.0003323,
+          "cumulative_seconds": 0.0008734000000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'get' of 'dict' objects>",
+          "calls": 3200,
+          "self_seconds": 0.0007659,
+          "cumulative_seconds": 0.0007659
+        },
+        {
+          "file": "registry.py",
+          "line": 34,
+          "function": "result_size",
+          "calls": 200,
+          "self_seconds": 0.00024300000000000002,
+          "cumulative_seconds": 0.0007561
+        }
+      ],
+      "correctness": "passed"
+    },
+    {
+      "name": "dbsize",
+      "size": 4096,
+      "operations": 200,
+      "warmup_operations": 10,
+      "seconds": 0.8254166999977315,
+      "top_cumulative": [
+        {
+          "file": "profiling.py",
+          "line": 30,
+          "function": "operation",
+          "calls": 200,
+          "self_seconds": 0.0007506,
+          "cumulative_seconds": 0.8250805000000001
+        },
+        {
+          "file": "executor.py",
+          "line": 100,
+          "function": "execute",
+          "calls": 200,
+          "self_seconds": 0.00044740000000000003,
+          "cumulative_seconds": 0.824044
+        },
+        {
+          "file": "executor.py",
+          "line": 120,
+          "function": "_execute",
+          "calls": 200,
+          "self_seconds": 0.0011728,
+          "cumulative_seconds": 0.8234394
+        },
+        {
+          "file": "transactions.py",
+          "line": 70,
+          "function": "run",
+          "calls": 200,
+          "self_seconds": 0.000553,
+          "cumulative_seconds": 0.8184992000000001
+        },
+        {
+          "file": "executor.py",
+          "line": 132,
+          "function": "_dispatch",
+          "calls": 200,
+          "self_seconds": 0.00028500000000000004,
+          "cumulative_seconds": 0.8170667
+        },
+        {
+          "file": "registry.py",
+          "line": 86,
+          "function": "dispatch",
+          "calls": 200,
+          "self_seconds": 0.0008794,
+          "cumulative_seconds": 0.8167364
+        },
+        {
+          "file": "keyspace.py",
+          "line": 23,
+          "function": "dbsize",
+          "calls": 200,
+          "self_seconds": 0.00044340000000000004,
+          "cumulative_seconds": 0.8148540000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method builtins.len>",
+          "calls": 800,
+          "self_seconds": 0.00047920000000000005,
+          "cumulative_seconds": 0.814351
+        },
+        {
+          "file": "store.py",
+          "line": 311,
+          "function": "__len__",
+          "calls": 200,
+          "self_seconds": 0.0004178,
+          "cumulative_seconds": 0.8138718
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method builtins.sum>",
+          "calls": 400,
+          "self_seconds": 0.1343513,
+          "cumulative_seconds": 0.8135035
+        },
+        {
+          "file": "store.py",
+          "line": 313,
+          "function": "<genexpr>",
+          "calls": 819800,
+          "self_seconds": 0.30842030000000004,
+          "cumulative_seconds": 0.6791522000000001
+        },
+        {
+          "file": "expiration.py",
+          "line": 13,
+          "function": "deadline",
+          "calls": 819600,
+          "self_seconds": 0.2405065,
+          "cumulative_seconds": 0.3707319
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'get' of 'dict' objects>",
+          "calls": 820000,
+          "self_seconds": 0.13039040000000002,
+          "cumulative_seconds": 0.13039040000000002
+        },
+        {
+          "file": "registry.py",
+          "line": 70,
+          "function": "resolve",
+          "calls": 400,
+          "self_seconds": 0.0007296000000000001,
+          "cumulative_seconds": 0.0012907
+        },
+        {
+          "file": "registry.py",
+          "line": 34,
+          "function": "result_size",
+          "calls": 200,
+          "self_seconds": 0.000346,
+          "cumulative_seconds": 0.0011330000000000001
+        }
+      ],
+      "correctness": "passed"
+    }
+  ],
+  "elapsed_seconds": 13.323432899996988
+}

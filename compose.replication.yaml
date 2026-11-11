@@ -1,0 +1,22 @@
+services:
+  primary:
+    build: .
+    image: pyredis-engine:local
+    command: ["--port", "6380", "--appendonly", "/data/primary.aof", "--appendfsync", "always", "--snapshots", "--replication-recovery"]
+    volumes:
+      - primary-data:/data
+  replica:
+    image: pyredis-engine:local
+    network_mode: "service:primary"
+    depends_on:
+      primary:
+        condition: service_healthy
+    command: ["--port", "6381", "--appendonly", "/data/replica.aof", "--appendfsync", "always", "--snapshots", "--replication-recovery", "--replicaof", "127.0.0.1", "6380"]
+    environment:
+      PYREDIS_HEALTH_PORT: "6381"
+    volumes:
+      - replica-data:/data
+
+volumes:
+  primary-data:
+  replica-data:

@@ -1,0 +1,11 @@
+services:
+  server:
+    build: .
+    image: pyredis-engine:local
+    command: ["--appendonly", "/data/server.aof", "--appendfsync", "always", "--snapshots"]
+    volumes:
+      - pyredis-data:/data
+    restart: unless-stopped
+
+volumes:
+  pyredis-data:

@@ -1,0 +1,130 @@
+{
+  "hash_seed": "0",
+  "note": "In-process, sequential separate processes; high-water RSS is process-wide, not index attribution.",
+  "before_fbb05bb": {
+    "python": "3.14.7",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+    "samples": 30,
+    "warmup": 10,
+    "results": [
+      {
+        "size": 1000,
+        "median_us": {
+          "HSET": 26.1,
+          "HDEL": 23.8,
+          "SADD": 36.75,
+          "SREM": 37.05
+        },
+        "accounted_bytes": 153386,
+        "peak_rss_bytes_process_highwater": 35422208
+      },
+      {
+        "size": 5000,
+        "median_us": {
+          "HSET": 45.8,
+          "HDEL": 41.650000000000006,
+          "SADD": 156.8,
+          "SREM": 144.64999999999998
+        },
+        "accounted_bytes": 765386,
+        "peak_rss_bytes_process_highwater": 36716544
+      },
+      {
+        "size": 20000,
+        "median_us": {
+          "HSET": 133.7,
+          "HDEL": 131.05,
+          "SADD": 801.5,
+          "SREM": 743.75
+        },
+        "accounted_bytes": 3060386,
+        "peak_rss_bytes_process_highwater": 41189376
+      }
+    ]
+  },
+  "fbb05bb": {
+    "python": "3.14.7",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+    "samples": 30,
+    "warmup": 10,
+    "results": [
+      {
+        "size": 1000,
+        "median_us": {
+          "HSET": 208.55,
+          "HDEL": 243.05,
+          "SADD": 280.45,
+          "SREM": 273.05
+        },
+        "accounted_bytes": 169386,
+        "peak_rss_bytes_process_highwater": 35389440
+      },
+      {
+        "size": 5000,
+        "median_us": {
+          "HSET": 1351.1999999999998,
+          "HDEL": 1331.65,
+          "SADD": 1480.05,
+          "SREM": 1500.15
+        },
+        "accounted_bytes": 845386,
+        "peak_rss_bytes_process_highwater": 37101568
+      },
+      {
+        "size": 20000,
+        "median_us": {
+          "HSET": 6732.6,
+          "HDEL": 6772.549999999999,
+          "SADD": 7491.5,
+          "SREM": 7461.4
+        },
+        "accounted_bytes": 3380386,
+        "peak_rss_bytes_process_highwater": 41422848
+      }
+    ]
+  },
+  "incremental_worktree": {
+    "python": "3.14.7",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+    "samples": 30,
+    "warmup": 10,
+    "results": [
+      {
+        "size": 1000,
+        "median_us": {
+          "HSET": 40.849999999999994,
+          "HDEL": 47.6,
+          "SADD": 90.85,
+          "SREM": 72.7
+        },
+        "accounted_bytes": 169386,
+        "peak_rss_bytes_process_highwater": 35745792
+      },
+      {
+        "size": 5000,
+        "median_us": {
+          "HSET": 73.25,
+          "HDEL": 160.8,
+          "SADD": 223.0,
+          "SREM": 239.05
+        },
+        "accounted_bytes": 845386,
+        "peak_rss_bytes_process_highwater": 37519360
+      },
+      {
+        "size": 20000,
+        "median_us": {
+          "HSET": 182.2,
+          "HDEL": 374.79999999999995,
+          "SADD": 1067.45,
+          "SREM": 1165.85
+        },
+        "accounted_bytes": 3380386,
+        "peak_rss_bytes_process_highwater": 42741760
+      }
+    ]
+  }
+}

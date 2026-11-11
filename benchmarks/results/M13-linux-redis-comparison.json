@@ -1,0 +1,3823 @@
+{
+  "schema_version": 1,
+  "environment": {
+    "python": "3.11.18 (main, Nov  5 2026, 09:41:24) [GCC 12.2.0]",
+    "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+    "machine": "x86_64",
+    "cpu": "Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz",
+    "logical_cpus": 8,
+    "clock": "perf_counter_ns",
+    "rss_probe": "Linux /proc/self/statm and getrusage ru_maxrss",
+    "pid": 1,
+    "memory_total_kib": 8017568,
+    "cgroup_cpu.max": "max 100000",
+    "cgroup_memory.max": "max"
+  },
+  "recorded_utc": "2026-11-10T14:46:12.379299+00:00",
+  "runtime_sha256": "7341d15bd332a3ca08cf8cbc129b95f22a193efb021c0bd64b982a64557b9443",
+  "settings": {
+    "samples": 3,
+    "operations": 20,
+    "warmup": 4,
+    "minimum_seconds": 0.15
+  },
+  "suite": "compare",
+  "git_revision": "c6306a6d98a68c1d9e0920f11080b712f390a0e7",
+  "rows": [
+    {
+      "case": {
+        "command": "GET",
+        "clients": 1,
+        "keys": 512,
+        "payload_bytes": 32,
+        "mode": "memory"
+      },
+      "correctness": "passed",
+      "settings": {
+        "samples": 3,
+        "operations": 20,
+        "warmup": 4,
+        "minimum_seconds": 0.15
+      },
+      "samples": [
+        {
+          "sample": 0,
+          "operations": 428,
+          "seconds": 0.15010060000000003,
+          "ops_per_second": 2851.420980329192,
+          "latency": {
+            "count": 428,
+            "min_ms": 0.2485,
+            "p50_ms": 0.3451,
+            "p95_ms": 0.4297,
+            "p99_ms": 0.5871,
+            "max_ms": 0.9723,
+            "mean_ms": 0.349363785046729
+          },
+          "server": {
+            "metrics": {
+              "connections_accepted": 1,
+              "connections_rejected": 0,
+              "connections_active": 1,
+              "commands": 438,
+              "command_errors": 0,
+              "protocol_errors": 0,
+              "read_timeouts": 0,
+              "write_timeouts": 0,
+              "allocation_failures": 0,
+              "memory_accounted_bytes": 118784,
+              "maxmemory_bytes": 67108864,
+              "memory_rejections": 0,
+              "allocation_rejections": 0,
+              "keys_physical": 512,
+              "keys_expiring": 0,
+              "connections_owned": 1,
+              "client_tasks": 1,
+              "channels": 0,
+              "subscriptions": 0,
+              "pubsub_pending_bytes": 0,
+              "pubsub_pending_frames": 0
+            },
+            "memory": {
+              "rss_bytes": 27561984,
+              "peak_rss_bytes": 27000832,
+              "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+            },
+            "sampled_peak_rss_bytes": 27561984,
+            "lag_ns": [
+              90000,
+              337500,
+              400300,
+              341100,
+              297900,
+              237800,
+              208200,
+              117300,
+              133300,
+              275900,
+              226300,
+              97600,
+              43800,
+              138100
+            ],
+            "lag_max_ns": 400300,
+            "cpu_seconds": 0.378976,
+            "traced_current_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.07274439999999999,
+          "maintenance": null
+        },
+        {
+          "sample": 1,
+          "operations": 425,
+          "seconds": 0.15046300000000024,
+          "ops_per_second": 2824.6146893256105,
+          "latency": {
+            "count": 425,
+            "min_ms": 0.2728,
+            "p50_ms": 0.3425,
+            "p95_ms": 0.4523,
+            "p99_ms": 0.647,
+            "max_ms": 1.0717,
+            "mean_ms": 0.3526658823529412
+          },
+          "server": {
+            "metrics": {
+              "connections_accepted": 1,
+              "connections_rejected": 0,
+              "connections_active": 1,
+              "commands": 863,
+              "command_errors": 0,
+              "protocol_errors": 0,
+              "read_timeouts": 0,
+              "write_timeouts": 0,
+              "allocation_failures": 0,
+              "memory_accounted_bytes": 118784,
+              "maxmemory_bytes": 67108864,
+              "memory_rejections": 0,
+              "allocation_rejections": 0,
+              "keys_physical": 512,
+              "keys_expiring": 0,
+              "connections_owned": 1,
+              "client_tasks": 1,
+              "channels": 0,
+              "subscriptions": 0,
+              "pubsub_pending_bytes": 0,
+              "pubsub_pending_frames": 0
+            },
+            "memory": {
+              "rss_bytes": 27561984,
+              "peak_rss_bytes": 27000832,
+              "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+            },
+            "sampled_peak_rss_bytes": 27561984,
+            "lag_ns": [
+              52500,
+              152000,
+              93800,
+              127300,
+              137600,
+              226600,
+              153700,
+              196700,
+              199400,
+              153900,
+              112800,
+              266700,
+              279900,
+              82100,
+              299300
+            ],
+            "lag_max_ns": 299300,
+            "cpu_seconds": 0.4531617,
+            "traced_current_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.073801,
+          "maintenance": null
+        },
+        {
+          "sample": 2,
+          "operations": 322,
+          "seconds": 0.15009600000000134,
+          "ops_per_second": 2145.2936787122717,
+          "latency": {
+            "count": 322,
+            "min_ms": 0.2781,
+            "p50_ms": 0.4265,
+            "p95_ms": 0.7134,
+            "p99_ms": 0.9384,
+            "max_ms": 1.249,
+            "mean_ms": 0.46429316770186335
+          },
+          "server": {
+            "metrics": {
+              "connections_accepted": 1,
+              "connections_rejected": 0,
+              "connections_active": 1,
+              "commands": 1185,
+              "command_errors": 0,
+              "protocol_errors": 0,
+              "read_timeouts": 0,
+              "write_timeouts": 0,
+              "allocation_failures": 0,
+              "memory_accounted_bytes": 118784,
+              "maxmemory_bytes": 67108864,
+              "memory_rejections": 0,
+              "allocation_rejections": 0,
+              "keys_physical": 512,
+              "keys_expiring": 0,
+              "connections_owned": 1,
+              "client_tasks": 1,
+              "channels": 0,
+              "subscriptions": 0,
+              "pubsub_pending_bytes": 0,
+              "pubsub_pending_frames": 0
+            },
+            "memory": {
+              "rss_bytes": 27566080,
+              "peak_rss_bytes": 27000832,
+              "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+            },
+            "sampled_peak_rss_bytes": 27566080,
+            "lag_ns": [
+              267500,
+              116200,
+              387800,
+              415400,
+              258500,
+              266500,
+              274200,
+              611000,
+              103900,
+              498800,
+              137700,
+              253200,
+              376400,
+              213600,
+              135800
+            ],
+            "lag_max_ns": 611000,
+            "cpu_seconds": 0.5312476,
+            "traced_current_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.07768800000000003,
+          "maintenance": null
+        }
+      ],
+      "operations": 1175,
+      "ops_per_second": 2607.289404242128,
+      "latency": {
+        "count": 1175,
+        "min_ms": 0.2485,
+        "p50_ms": 0.3544,
+        "p95_ms": 0.5591,
+        "p99_ms": 0.7941,
+        "max_ms": 1.249,
+        "mean_ms": 0.3820537021276596
+      },
+      "engine": "PyRedis",
+      "final": {
+        "metrics": {
+          "connections_accepted": 1,
+          "connections_rejected": 0,
+          "connections_active": 1,
+          "commands": 1191,
+          "command_errors": 0,
+          "protocol_errors": 0,
+          "read_timeouts": 0,
+          "write_timeouts": 0,
+          "allocation_failures": 0,
+          "memory_accounted_bytes": 118784,
+          "maxmemory_bytes": 67108864,
+          "memory_rejections": 0,
+          "allocation_rejections": 0,
+          "keys_physical": 512,
+          "keys_expiring": 0,
+          "connections_owned": 1,
+          "client_tasks": 1,
+          "channels": 0,
+          "subscriptions": 0,
+          "pubsub_pending_bytes": 0,
+          "pubsub_pending_frames": 0
+        },
+        "memory": {
+          "rss_bytes": 27594752,
+          "peak_rss_bytes": 27000832,
+          "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+        },
+        "sampled_peak_rss_bytes": 27594752,
+        "lag_ns": [
+          267500,
+          116200,
+          387800,
+          415400,
+          258500,
+          266500,
+          274200,
+          611000,
+          103900,
+          498800,
+          137700,
+          253200,
+          376400,
+          213600,
+          135800,
+          890600
+        ],
+        "lag_max_ns": 890600,
+        "cpu_seconds": 0.5366779,
+        "traced_current_bytes": null,
+        "offset": null,
+        "journal_bytes": 0
+      }
+    },
+    {
+      "case": {
+        "command": "GET",
+        "clients": 1,
+        "keys": 512,
+        "payload_bytes": 32,
+        "mode": "memory"
+      },
+      "correctness": "passed",
+      "settings": {
+        "samples": 3,
+        "operations": 20,
+        "warmup": 4,
+        "minimum_seconds": 0.15
+      },
+      "samples": [
+        {
+          "sample": 0,
+          "operations": 624,
+          "seconds": 0.15022599999999997,
+          "ops_per_second": 4153.741695844928,
+          "latency": {
+            "count": 624,
+            "min_ms": 0.1505,
+            "p50_ms": 0.2081,
+            "p95_ms": 0.3438,
+            "p99_ms": 0.6219,
+            "max_ms": 5.4891,
+            "mean_ms": 0.23935288461538462
+          },
+          "server": {
+            "memory": {
+              "rss_bytes": 11681792,
+              "peak_rss_bytes": 11681792,
+              "source": "Linux /proc reference PID RSS/VmHWM"
+            },
+            "cpu_seconds": 0.05,
+            "metrics": null,
+            "lag_ns": [],
+            "lag_max_ns": null,
+            "sampled_peak_rss_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.04,
+          "maintenance": null
+        },
+        {
+          "sample": 1,
+          "operations": 710,
+          "seconds": 0.15033299999999983,
+          "ops_per_second": 4722.848609420425,
+          "latency": {
+            "count": 710,
+            "min_ms": 0.1354,
+            "p50_ms": 0.2003,
+            "p95_ms": 0.2814,
+            "p99_ms": 0.3756,
+            "max_ms": 0.6152,
+            "mean_ms": 0.21041295774647886
+          },
+          "server": {
+            "memory": {
+              "rss_bytes": 11681792,
+              "peak_rss_bytes": 11681792,
+              "source": "Linux /proc reference PID RSS/VmHWM"
+            },
+            "cpu_seconds": 0.08,
+            "metrics": null,
+            "lag_ns": [],
+            "lag_max_ns": null,
+            "sampled_peak_rss_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.03,
+          "maintenance": null
+        },
+        {
+          "sample": 2,
+          "operations": 776,
+          "seconds": 0.15023019999999931,
+          "ops_per_second": 5165.406156684898,
+          "latency": {
+            "count": 776,
+            "min_ms": 0.1179,
+            "p50_ms": 0.1828,
+            "p95_ms": 0.248,
+            "p99_ms": 0.3091,
+            "max_ms": 0.4925,
+            "mean_ms": 0.19244420103092783
+          },
+          "server": {
+            "memory": {
+              "rss_bytes": 11681792,
+              "peak_rss_bytes": 11681792,
+              "source": "Linux /proc reference PID RSS/VmHWM"
+            },
+            "cpu_seconds": 0.12,
+            "metrics": null,
+            "lag_ns": [],
+            "lag_max_ns": null,
+            "sampled_peak_rss_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.039999999999999994,
+          "maintenance": null
+        }
+      ],
+      "operations": 2110,
+      "ops_per_second": 4680.680016291438,
+      "latency": {
+        "count": 2110,
+        "min_ms": 0.1179,
+        "p50_ms": 0.1943,
+        "p95_ms": 0.2945,
+        "p99_ms": 0.4143,
+        "max_ms": 5.4891,
+        "mean_ms": 0.21236308056872039
+      },
+      "engine": "Redis 7.4.12",
+      "final": {
+        "memory": {
+          "rss_bytes": 11698176,
+          "peak_rss_bytes": 11698176,
+          "source": "Linux /proc reference PID RSS/VmHWM"
+        },
+        "cpu_seconds": 0.12,
+        "metrics": null,
+        "lag_ns": [],
+        "lag_max_ns": null,
+        "sampled_peak_rss_bytes": null,
+        "offset": null,
+        "journal_bytes": 0
+      }
+    },
+    {
+      "case": {
+        "command": "GET",
+        "clients": 10,
+        "keys": 512,
+        "payload_bytes": 32,
+        "mode": "memory"
+      },
+      "correctness": "passed",
+      "settings": {
+        "samples": 3,
+        "operations": 20,
+        "warmup": 4,
+        "minimum_seconds": 0.15
+      },
+      "samples": [
+        {
+          "sample": 0,
+          "operations": 1560,
+          "seconds": 0.15118039999999944,
+          "ops_per_second": 10318.797939415464,
+          "latency": {
+            "count": 1560,
+            "min_ms": 0.3535,
+            "p50_ms": 0.9356,
+            "p95_ms": 1.2214,
+            "p99_ms": 1.4325,
+            "max_ms": 1.583,
+            "mean_ms": 0.9632722435897436
+          },
+          "server": {
+            "metrics": {
+              "connections_accepted": 10,
+              "connections_rejected": 0,
+              "connections_active": 10,
+              "commands": 1606,
+              "command_errors": 0,
+              "protocol_errors": 0,
+              "read_timeouts": 0,
+              "write_timeouts": 0,
+              "allocation_failures": 0,
+              "memory_accounted_bytes": 118784,
+              "maxmemory_bytes": 67108864,
+              "memory_rejections": 0,
+              "allocation_rejections": 0,
+              "keys_physical": 512,
+              "keys_expiring": 0,
+              "connections_owned": 10,
+              "client_tasks": 10,
+              "channels": 0,
+              "subscriptions": 0,
+              "pubsub_pending_bytes": 0,
+              "pubsub_pending_frames": 0
+            },
+            "memory": {
+              "rss_bytes": 27774976,
+              "peak_rss_bytes": 27463680,
+              "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+            },
+            "sampled_peak_rss_bytes": 27774976,
+            "lag_ns": [
+              970200,
+              910700,
+              1000400,
+              1142100,
+              1270500,
+              914000,
+              1154800,
+              973000,
+              1024900,
+              1346200,
+              933100,
+              810500,
+              1302700,
+              1530600
+            ],
+            "lag_max_ns": 1530600,
+            "cpu_seconds": 0.4155847,
+            "traced_current_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.15137799999999996,
+          "maintenance": null
+        },
+        {
+          "sample": 1,
+          "operations": 1589,
+          "seconds": 0.15159829999999985,
+          "ops_per_second": 10481.647881275723,
+          "latency": {
+            "count": 1589,
+            "min_ms": 0.4231,
+            "p50_ms": 0.9304,
+            "p95_ms": 1.2013,
+            "p99_ms": 1.3842,
+            "max_ms": 1.6266,
+            "mean_ms": 0.9475120201384518
+          },
+          "server": {
+            "metrics": {
+              "connections_accepted": 10,
+              "connections_rejected": 0,
+              "connections_active": 10,
+              "commands": 3195,
+              "command_errors": 0,
+              "protocol_errors": 0,
+              "read_timeouts": 0,
+              "write_timeouts": 0,
+              "allocation_failures": 0,
+              "memory_accounted_bytes": 118784,
+              "maxmemory_bytes": 67108864,
+              "memory_rejections": 0,
+              "allocation_rejections": 0,
+              "keys_physical": 512,
+              "keys_expiring": 0,
+              "connections_owned": 10,
+              "client_tasks": 10,
+              "channels": 0,
+              "subscriptions": 0,
+              "pubsub_pending_bytes": 0,
+              "pubsub_pending_frames": 0
+            },
+            "memory": {
+              "rss_bytes": 27779072,
+              "peak_rss_bytes": 27463680,
+              "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+            },
+            "sampled_peak_rss_bytes": 27779072,
+            "lag_ns": [
+              1019600,
+              2014600,
+              714700,
+              903500,
+              1467000,
+              692200,
+              1273300,
+              793900,
+              860800,
+              1078900,
+              933800,
+              1262900,
+              931600,
+              86300
+            ],
+            "lag_max_ns": 2014600,
+            "cpu_seconds": 0.5680623,
+            "traced_current_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.1518794,
+          "maintenance": null
+        },
+        {
+          "sample": 2,
+          "operations": 1525,
+          "seconds": 0.15131640000000068,
+          "ops_per_second": 10078.220206137557,
+          "latency": {
+            "count": 1525,
+            "min_ms": 0.4595,
+            "p50_ms": 0.9699,
+            "p95_ms": 1.2243,
+            "p99_ms": 1.4706,
+            "max_ms": 1.6401,
+            "mean_ms": 0.9858106885245901
+          },
+          "server": {
+            "metrics": {
+              "connections_accepted": 10,
+              "connections_rejected": 0,
+              "connections_active": 10,
+              "commands": 4720,
+              "command_errors": 0,
+              "protocol_errors": 0,
+              "read_timeouts": 0,
+              "write_timeouts": 0,
+              "allocation_failures": 0,
+              "memory_accounted_bytes": 118784,
+              "maxmemory_bytes": 67108864,
+              "memory_rejections": 0,
+              "allocation_rejections": 0,
+              "keys_physical": 512,
+              "keys_expiring": 0,
+              "connections_owned": 10,
+              "client_tasks": 10,
+              "channels": 0,
+              "subscriptions": 0,
+              "pubsub_pending_bytes": 0,
+              "pubsub_pending_frames": 0
+            },
+            "memory": {
+              "rss_bytes": 27779072,
+              "peak_rss_bytes": 27463680,
+              "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+            },
+            "sampled_peak_rss_bytes": 27779072,
+            "lag_ns": [
+              1034800,
+              1434900,
+              795200,
+              1634500,
+              795400,
+              1191000,
+              1146900,
+              1849100,
+              1261000,
+              1079600,
+              988100,
+              1109800,
+              1173300
+            ],
+            "lag_max_ns": 1849100,
+            "cpu_seconds": 0.7200731,
+            "traced_current_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.15159670000000003,
+          "maintenance": null
+        }
+      ],
+      "operations": 4674,
+      "ops_per_second": 10292.998096654204,
+      "latency": {
+        "count": 4674,
+        "min_ms": 0.3535,
+        "p50_ms": 0.9448,
+        "p95_ms": 1.2135,
+        "p99_ms": 1.4394,
+        "max_ms": 1.6401,
+        "mean_ms": 0.9652679931536158
+      },
+      "engine": "PyRedis",
+      "final": {
+        "metrics": {
+          "connections_accepted": 10,
+          "connections_rejected": 0,
+          "connections_active": 10,
+          "commands": 4726,
+          "command_errors": 0,
+          "protocol_errors": 0,
+          "read_timeouts": 0,
+          "write_timeouts": 0,
+          "allocation_failures": 0,
+          "memory_accounted_bytes": 118784,
+          "maxmemory_bytes": 67108864,
+          "memory_rejections": 0,
+          "allocation_rejections": 0,
+          "keys_physical": 512,
+          "keys_expiring": 0,
+          "connections_owned": 10,
+          "client_tasks": 10,
+          "channels": 0,
+          "subscriptions": 0,
+          "pubsub_pending_bytes": 0,
+          "pubsub_pending_frames": 0
+        },
+        "memory": {
+          "rss_bytes": 27803648,
+          "peak_rss_bytes": 27463680,
+          "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+        },
+        "sampled_peak_rss_bytes": 27803648,
+        "lag_ns": [
+          1034800,
+          1434900,
+          795200,
+          1634500,
+          795400,
+          1191000,
+          1146900,
+          1849100,
+          1261000,
+          1079600,
+          988100,
+          1109800,
+          1173300,
+          40100
+        ],
+        "lag_max_ns": 1849100,
+        "cpu_seconds": 0.7255664,
+        "traced_current_bytes": null,
+        "offset": null,
+        "journal_bytes": 0
+      }
+    },
+    {
+      "case": {
+        "command": "GET",
+        "clients": 10,
+        "keys": 512,
+        "payload_bytes": 32,
+        "mode": "memory"
+      },
+      "correctness": "passed",
+      "settings": {
+        "samples": 3,
+        "operations": 20,
+        "warmup": 4,
+        "minimum_seconds": 0.15
+      },
+      "samples": [
+        {
+          "sample": 0,
+          "operations": 1976,
+          "seconds": 0.1506059000000004,
+          "ops_per_second": 13120.335923094612,
+          "latency": {
+            "count": 1976,
+            "min_ms": 0.3365,
+            "p50_ms": 0.7624,
+            "p95_ms": 0.8857,
+            "p99_ms": 0.9359,
+            "max_ms": 1.0759,
+            "mean_ms": 0.7591692307692307
+          },
+          "server": {
+            "memory": {
+              "rss_bytes": 11710464,
+              "peak_rss_bytes": 11710464,
+              "source": "Linux /proc reference PID RSS/VmHWM"
+            },
+            "cpu_seconds": 0.05,
+            "metrics": null,
+            "lag_ns": [],
+            "lag_max_ns": null,
+            "sampled_peak_rss_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.05,
+          "maintenance": null
+        },
+        {
+          "sample": 1,
+          "operations": 1846,
+          "seconds": 0.1508691000000013,
+          "ops_per_second": 12235.77260022088,
+          "latency": {
+            "count": 1846,
+            "min_ms": 0.2848,
+            "p50_ms": 0.8045,
+            "p95_ms": 1.0115,
+            "p99_ms": 1.0962,
+            "max_ms": 1.4415,
+            "mean_ms": 0.8126575297941495
+          },
+          "server": {
+            "memory": {
+              "rss_bytes": 11714560,
+              "peak_rss_bytes": 11714560,
+              "source": "Linux /proc reference PID RSS/VmHWM"
+            },
+            "cpu_seconds": 0.09,
+            "metrics": null,
+            "lag_ns": [],
+            "lag_max_ns": null,
+            "sampled_peak_rss_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.039999999999999994,
+          "maintenance": null
+        },
+        {
+          "sample": 2,
+          "operations": 1870,
+          "seconds": 0.1507512000000002,
+          "ops_per_second": 12404.544706775121,
+          "latency": {
+            "count": 1870,
+            "min_ms": 0.1277,
+            "p50_ms": 0.805,
+            "p95_ms": 0.9617,
+            "p99_ms": 1.1927,
+            "max_ms": 1.3902,
+            "mean_ms": 0.8017665240641711
+          },
+          "server": {
+            "memory": {
+              "rss_bytes": 11718656,
+              "peak_rss_bytes": 11718656,
+              "source": "Linux /proc reference PID RSS/VmHWM"
+            },
+            "cpu_seconds": 0.13,
+            "metrics": null,
+            "lag_ns": [],
+            "lag_max_ns": null,
+            "sampled_peak_rss_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.04000000000000001,
+          "maintenance": null
+        }
+      ],
+      "operations": 5692,
+      "ops_per_second": 12586.621473943738,
+      "latency": {
+        "count": 5692,
+        "min_ms": 0.1277,
+        "p50_ms": 0.7896,
+        "p95_ms": 0.9488,
+        "p99_ms": 1.0801,
+        "max_ms": 1.4415,
+        "mean_ms": 0.7905108222066058
+      },
+      "engine": "Redis 7.4.12",
+      "final": {
+        "memory": {
+          "rss_bytes": 11739136,
+          "peak_rss_bytes": 11739136,
+          "source": "Linux /proc reference PID RSS/VmHWM"
+        },
+        "cpu_seconds": 0.13,
+        "metrics": null,
+        "lag_ns": [],
+        "lag_max_ns": null,
+        "sampled_peak_rss_bytes": null,
+        "offset": null,
+        "journal_bytes": 0
+      }
+    },
+    {
+      "case": {
+        "command": "GET",
+        "clients": 100,
+        "keys": 512,
+        "payload_bytes": 32,
+        "mode": "memory"
+      },
+      "correctness": "passed",
+      "settings": {
+        "samples": 3,
+        "operations": 20,
+        "warmup": 4,
+        "minimum_seconds": 0.15
+      },
+      "samples": [
+        {
+          "sample": 0,
+          "operations": 2000,
+          "seconds": 0.19542189999999948,
+          "ops_per_second": 10234.267500213668,
+          "latency": {
+            "count": 2000,
+            "min_ms": 3.1174,
+            "p50_ms": 9.3045,
+            "p95_ms": 12.178,
+            "p99_ms": 12.8662,
+            "max_ms": 13.2458,
+            "mean_ms": 9.362404849999999
+          },
+          "server": {
+            "metrics": {
+              "connections_accepted": 100,
+              "connections_rejected": 0,
+              "connections_active": 100,
+              "commands": 2406,
+              "command_errors": 0,
+              "protocol_errors": 0,
+              "read_timeouts": 0,
+              "write_timeouts": 0,
+              "allocation_failures": 0,
+              "memory_accounted_bytes": 118784,
+              "maxmemory_bytes": 67108864,
+              "memory_rejections": 0,
+              "allocation_rejections": 0,
+              "keys_physical": 512,
+              "keys_expiring": 0,
+              "connections_owned": 100,
+              "client_tasks": 100,
+              "channels": 0,
+              "subscriptions": 0,
+              "pubsub_pending_bytes": 0,
+              "pubsub_pending_frames": 0
+            },
+            "memory": {
+              "rss_bytes": 28684288,
+              "peak_rss_bytes": 28381184,
+              "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+            },
+            "sampled_peak_rss_bytes": 28684288,
+            "lag_ns": [
+              505400,
+              9278600,
+              17350200,
+              11719100,
+              13820400,
+              11281600,
+              15155000,
+              11328500,
+              13582700
+            ],
+            "lag_max_ns": 17350200,
+            "cpu_seconds": 0.5051213,
+            "traced_current_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.19291740000000002,
+          "maintenance": null
+        },
+        {
+          "sample": 1,
+          "operations": 2000,
+          "seconds": 0.1977171000000002,
+          "ops_per_second": 10115.462951864041,
+          "latency": {
+            "count": 2000,
+            "min_ms": 3.5336,
+            "p50_ms": 9.5488,
+            "p95_ms": 11.2641,
+            "p99_ms": 12.5565,
+            "max_ms": 12.8735,
+            "mean_ms": 9.46923535
+          },
+          "server": {
+            "metrics": {
+              "connections_accepted": 100,
+              "connections_rejected": 0,
+              "connections_active": 100,
+              "commands": 4406,
+              "command_errors": 0,
+              "protocol_errors": 0,
+              "read_timeouts": 0,
+              "write_timeouts": 0,
+              "allocation_failures": 0,
+              "memory_accounted_bytes": 118784,
+              "maxmemory_bytes": 67108864,
+              "memory_rejections": 0,
+              "allocation_rejections": 0,
+              "keys_physical": 512,
+              "keys_expiring": 0,
+              "connections_owned": 100,
+              "client_tasks": 100,
+              "channels": 0,
+              "subscriptions": 0,
+              "pubsub_pending_bytes": 0,
+              "pubsub_pending_frames": 0
+            },
+            "memory": {
+              "rss_bytes": 28688384,
+              "peak_rss_bytes": 28381184,
+              "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+            },
+            "sampled_peak_rss_bytes": 28688384,
+            "lag_ns": [
+              10394000,
+              12880100,
+              8959200,
+              12710400,
+              9919300,
+              8565300,
+              11355500,
+              9376300,
+              11312300,
+              1925400
+            ],
+            "lag_max_ns": 12880100,
+            "cpu_seconds": 0.7036005,
+            "traced_current_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.1978671999999999,
+          "maintenance": null
+        },
+        {
+          "sample": 2,
+          "operations": 2000,
+          "seconds": 0.20429710000000156,
+          "ops_per_second": 9789.664170465388,
+          "latency": {
+            "count": 2000,
+            "min_ms": 4.1213,
+            "p50_ms": 10.1057,
+            "p95_ms": 11.2402,
+            "p99_ms": 11.88,
+            "max_ms": 11.969,
+            "mean_ms": 9.85832815
+          },
+          "server": {
+            "metrics": {
+              "connections_accepted": 100,
+              "connections_rejected": 0,
+              "connections_active": 100,
+              "commands": 6406,
+              "command_errors": 0,
+              "protocol_errors": 0,
+              "read_timeouts": 0,
+              "write_timeouts": 0,
+              "allocation_failures": 0,
+              "memory_accounted_bytes": 118784,
+              "maxmemory_bytes": 67108864,
+              "memory_rejections": 0,
+              "allocation_rejections": 0,
+              "keys_physical": 512,
+              "keys_expiring": 0,
+              "connections_owned": 100,
+              "client_tasks": 100,
+              "channels": 0,
+              "subscriptions": 0,
+              "pubsub_pending_bytes": 0,
+              "pubsub_pending_frames": 0
+            },
+            "memory": {
+              "rss_bytes": 28692480,
+              "peak_rss_bytes": 28381184,
+              "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+            },
+            "sampled_peak_rss_bytes": 28692480,
+            "lag_ns": [
+              11426300,
+              10857900,
+              12260800,
+              12767200,
+              9073400,
+              10093600,
+              10624900,
+              10353000,
+              15757200,
+              1757100
+            ],
+            "lag_max_ns": 15757200,
+            "cpu_seconds": 0.9084521,
+            "traced_current_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.20436759999999998,
+          "maintenance": null
+        }
+      ],
+      "operations": 6000,
+      "ops_per_second": 10042.915049827065,
+      "latency": {
+        "count": 6000,
+        "min_ms": 3.1174,
+        "p50_ms": 9.7017,
+        "p95_ms": 11.6037,
+        "p99_ms": 12.4724,
+        "max_ms": 13.2458,
+        "mean_ms": 9.563322783333334
+      },
+      "engine": "PyRedis",
+      "final": {
+        "metrics": {
+          "connections_accepted": 100,
+          "connections_rejected": 0,
+          "connections_active": 100,
+          "commands": 6412,
+          "command_errors": 0,
+          "protocol_errors": 0,
+          "read_timeouts": 0,
+          "write_timeouts": 0,
+          "allocation_failures": 0,
+          "memory_accounted_bytes": 118784,
+          "maxmemory_bytes": 67108864,
+          "memory_rejections": 0,
+          "allocation_rejections": 0,
+          "keys_physical": 512,
+          "keys_expiring": 0,
+          "connections_owned": 100,
+          "client_tasks": 100,
+          "channels": 0,
+          "subscriptions": 0,
+          "pubsub_pending_bytes": 0,
+          "pubsub_pending_frames": 0
+        },
+        "memory": {
+          "rss_bytes": 28708864,
+          "peak_rss_bytes": 28381184,
+          "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+        },
+        "sampled_peak_rss_bytes": 28708864,
+        "lag_ns": [
+          11426300,
+          10857900,
+          12260800,
+          12767200,
+          9073400,
+          10093600,
+          10624900,
+          10353000,
+          15757200,
+          1757100,
+          1038400
+        ],
+        "lag_max_ns": 15757200,
+        "cpu_seconds": 0.9138787,
+        "traced_current_bytes": null,
+        "offset": null,
+        "journal_bytes": 0
+      }
+    },
+    {
+      "case": {
+        "command": "GET",
+        "clients": 100,
+        "keys": 512,
+        "payload_bytes": 32,
+        "mode": "memory"
+      },
+      "correctness": "passed",
+      "settings": {
+        "samples": 3,
+        "operations": 20,
+        "warmup": 4,
+        "minimum_seconds": 0.15
+      },
+      "samples": [
+        {
+          "sample": 0,
+          "operations": 2069,
+          "seconds": 0.15555390000000102,
+          "ops_per_second": 13300.855844822832,
+          "latency": {
+            "count": 2069,
+            "min_ms": 1.0767,
+            "p50_ms": 7.6495,
+            "p95_ms": 8.609,
+            "p99_ms": 8.6674,
+            "max_ms": 8.7433,
+            "mean_ms": 7.353021024649589
+          },
+          "server": {
+            "memory": {
+              "rss_bytes": 12619776,
+              "peak_rss_bytes": 12619776,
+              "source": "Linux /proc reference PID RSS/VmHWM"
+            },
+            "cpu_seconds": 0.05,
+            "metrics": null,
+            "lag_ns": [],
+            "lag_max_ns": null,
+            "sampled_peak_rss_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.04,
+          "maintenance": null
+        },
+        {
+          "sample": 1,
+          "operations": 2031,
+          "seconds": 0.15653520000000043,
+          "ops_per_second": 12974.717507627642,
+          "latency": {
+            "count": 2031,
+            "min_ms": 0.5462,
+            "p50_ms": 7.6588,
+            "p95_ms": 8.5513,
+            "p99_ms": 8.6107,
+            "max_ms": 8.6929,
+            "mean_ms": 7.441532644017725
+          },
+          "server": {
+            "memory": {
+              "rss_bytes": 12619776,
+              "peak_rss_bytes": 12619776,
+              "source": "Linux /proc reference PID RSS/VmHWM"
+            },
+            "cpu_seconds": 0.1,
+            "metrics": null,
+            "lag_ns": [],
+            "lag_max_ns": null,
+            "sampled_peak_rss_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.05,
+          "maintenance": null
+        },
+        {
+          "sample": 2,
+          "operations": 2072,
+          "seconds": 0.15692239999999913,
+          "ops_per_second": 13203.978526966268,
+          "latency": {
+            "count": 2072,
+            "min_ms": 1.7464,
+            "p50_ms": 7.4481,
+            "p95_ms": 8.4087,
+            "p99_ms": 9.1116,
+            "max_ms": 9.2361,
+            "mean_ms": 7.379334893822393
+          },
+          "server": {
+            "memory": {
+              "rss_bytes": 12619776,
+              "peak_rss_bytes": 12619776,
+              "source": "Linux /proc reference PID RSS/VmHWM"
+            },
+            "cpu_seconds": 0.15,
+            "metrics": null,
+            "lag_ns": [],
+            "lag_max_ns": null,
+            "sampled_peak_rss_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.04999999999999999,
+          "maintenance": null
+        }
+      ],
+      "operations": 6172,
+      "ops_per_second": 13159.592035589729,
+      "latency": {
+        "count": 6172,
+        "min_ms": 0.5462,
+        "p50_ms": 7.5636,
+        "p95_ms": 8.5632,
+        "p99_ms": 8.84,
+        "max_ms": 9.2361,
+        "mean_ms": 7.390981075826312
+      },
+      "engine": "Redis 7.4.12",
+      "final": {
+        "memory": {
+          "rss_bytes": 12623872,
+          "peak_rss_bytes": 12623872,
+          "source": "Linux /proc reference PID RSS/VmHWM"
+        },
+        "cpu_seconds": 0.15,
+        "metrics": null,
+        "lag_ns": [],
+        "lag_max_ns": null,
+        "sampled_peak_rss_bytes": null,
+        "offset": null,
+        "journal_bytes": 0
+      }
+    },
+    {
+      "case": {
+        "command": "SET",
+        "clients": 1,
+        "keys": 512,
+        "payload_bytes": 32,
+        "mode": "memory"
+      },
+      "correctness": "passed",
+      "settings": {
+        "samples": 3,
+        "operations": 20,
+        "warmup": 4,
+        "minimum_seconds": 0.15
+      },
+      "samples": [
+        {
+          "sample": 0,
+          "operations": 450,
+          "seconds": 0.15036740000000037,
+          "ops_per_second": 2992.6699537266645,
+          "latency": {
+            "count": 450,
+            "min_ms": 0.2308,
+            "p50_ms": 0.3306,
+            "p95_ms": 0.4135,
+            "p99_ms": 0.4642,
+            "max_ms": 0.7389,
+            "mean_ms": 0.33289711111111114
+          },
+          "server": {
+            "metrics": {
+              "connections_accepted": 1,
+              "connections_rejected": 0,
+              "connections_active": 1,
+              "commands": 460,
+              "command_errors": 0,
+              "protocol_errors": 0,
+              "read_timeouts": 0,
+              "write_timeouts": 0,
+              "allocation_failures": 0,
+              "memory_accounted_bytes": 118784,
+              "maxmemory_bytes": 67108864,
+              "memory_rejections": 0,
+              "allocation_rejections": 0,
+              "keys_physical": 512,
+              "keys_expiring": 0,
+              "connections_owned": 1,
+              "client_tasks": 1,
+              "channels": 0,
+              "subscriptions": 0,
+              "pubsub_pending_bytes": 0,
+              "pubsub_pending_frames": 0
+            },
+            "memory": {
+              "rss_bytes": 27766784,
+              "peak_rss_bytes": 27836416,
+              "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+            },
+            "sampled_peak_rss_bytes": 27766784,
+            "lag_ns": [
+              46900,
+              188300,
+              97900,
+              227700,
+              451800,
+              297300,
+              48800,
+              369300,
+              167300,
+              90000,
+              116400,
+              211800,
+              252600,
+              60300
+            ],
+            "lag_max_ns": 451800,
+            "cpu_seconds": 0.3455177,
+            "traced_current_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.0830729,
+          "maintenance": null
+        },
+        {
+          "sample": 1,
+          "operations": 423,
+          "seconds": 0.15017810000000154,
+          "ops_per_second": 2816.6556908097496,
+          "latency": {
+            "count": 423,
+            "min_ms": 0.2461,
+            "p50_ms": 0.3405,
+            "p95_ms": 0.4125,
+            "p99_ms": 0.4718,
+            "max_ms": 4.8351,
+            "mean_ms": 0.3535328605200946
+          },
+          "server": {
+            "metrics": {
+              "connections_accepted": 1,
+              "connections_rejected": 0,
+              "connections_active": 1,
+              "commands": 883,
+              "command_errors": 0,
+              "protocol_errors": 0,
+              "read_timeouts": 0,
+              "write_timeouts": 0,
+              "allocation_failures": 0,
+              "memory_accounted_bytes": 118784,
+              "maxmemory_bytes": 67108864,
+              "memory_rejections": 0,
+              "allocation_rejections": 0,
+              "keys_physical": 512,
+              "keys_expiring": 0,
+              "connections_owned": 1,
+              "client_tasks": 1,
+              "channels": 0,
+              "subscriptions": 0,
+              "pubsub_pending_bytes": 0,
+              "pubsub_pending_frames": 0
+            },
+            "memory": {
+              "rss_bytes": 27770880,
+              "peak_rss_bytes": 27836416,
+              "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+            },
+            "sampled_peak_rss_bytes": 27770880,
+            "lag_ns": [
+              246900,
+              204500,
+              270500,
+              213900,
+              295100,
+              171100,
+              254900,
+              80800,
+              39300,
+              100600,
+              278700,
+              281400,
+              39600,
+              98500,
+              66200
+            ],
+            "lag_max_ns": 295100,
+            "cpu_seconds": 0.431182,
+            "traced_current_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.08521580000000001,
+          "maintenance": null
+        },
+        {
+          "sample": 2,
+          "operations": 455,
+          "seconds": 0.1503054000000006,
+          "ops_per_second": 3027.17001518241,
+          "latency": {
+            "count": 455,
+            "min_ms": 0.2375,
+            "p50_ms": 0.3267,
+            "p95_ms": 0.3975,
+            "p99_ms": 0.4622,
+            "max_ms": 0.6378,
+            "mean_ms": 0.3290224175824176
+          },
+          "server": {
+            "metrics": {
+              "connections_accepted": 1,
+              "connections_rejected": 0,
+              "connections_active": 1,
+              "commands": 1338,
+              "command_errors": 0,
+              "protocol_errors": 0,
+              "read_timeouts": 0,
+              "write_timeouts": 0,
+              "allocation_failures": 0,
+              "memory_accounted_bytes": 118784,
+              "maxmemory_bytes": 67108864,
+              "memory_rejections": 0,
+              "allocation_rejections": 0,
+              "keys_physical": 512,
+              "keys_expiring": 0,
+              "connections_owned": 1,
+              "client_tasks": 1,
+              "channels": 0,
+              "subscriptions": 0,
+              "pubsub_pending_bytes": 0,
+              "pubsub_pending_frames": 0
+            },
+            "memory": {
+              "rss_bytes": 27770880,
+              "peak_rss_bytes": 27836416,
+              "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+            },
+            "sampled_peak_rss_bytes": 27770880,
+            "lag_ns": [
+              326700,
+              113300,
+              220200,
+              154500,
+              344300,
+              233300,
+              234000,
+              109500,
+              248900,
+              244500,
+              132900,
+              266100,
+              268100,
+              273300,
+              280600
+            ],
+            "lag_max_ns": 344300,
+            "cpu_seconds": 0.5137913,
+            "traced_current_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.08224039999999994,
+          "maintenance": null
+        }
+      ],
+      "operations": 1328,
+      "ops_per_second": 2945.5414195690696,
+      "latency": {
+        "count": 1328,
+        "min_ms": 0.2308,
+        "p50_ms": 0.3315,
+        "p95_ms": 0.4077,
+        "p99_ms": 0.4658,
+        "max_ms": 4.8351,
+        "mean_ms": 0.3381425451807229
+      },
+      "engine": "PyRedis",
+      "final": {
+        "metrics": {
+          "connections_accepted": 1,
+          "connections_rejected": 0,
+          "connections_active": 1,
+          "commands": 1344,
+          "command_errors": 0,
+          "protocol_errors": 0,
+          "read_timeouts": 0,
+          "write_timeouts": 0,
+          "allocation_failures": 0,
+          "memory_accounted_bytes": 118784,
+          "maxmemory_bytes": 67108864,
+          "memory_rejections": 0,
+          "allocation_rejections": 0,
+          "keys_physical": 512,
+          "keys_expiring": 0,
+          "connections_owned": 1,
+          "client_tasks": 1,
+          "channels": 0,
+          "subscriptions": 0,
+          "pubsub_pending_bytes": 0,
+          "pubsub_pending_frames": 0
+        },
+        "memory": {
+          "rss_bytes": 27795456,
+          "peak_rss_bytes": 27836416,
+          "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+        },
+        "sampled_peak_rss_bytes": 27795456,
+        "lag_ns": [
+          326700,
+          113300,
+          220200,
+          154500,
+          344300,
+          233300,
+          234000,
+          109500,
+          248900,
+          244500,
+          132900,
+          266100,
+          268100,
+          273300,
+          280600,
+          37400
+        ],
+        "lag_max_ns": 344300,
+        "cpu_seconds": 0.5187255,
+        "traced_current_bytes": null,
+        "offset": null,
+        "journal_bytes": 0
+      }
+    },
+    {
+      "case": {
+        "command": "SET",
+        "clients": 1,
+        "keys": 512,
+        "payload_bytes": 32,
+        "mode": "memory"
+      },
+      "correctness": "passed",
+      "settings": {
+        "samples": 3,
+        "operations": 20,
+        "warmup": 4,
+        "minimum_seconds": 0.15
+      },
+      "samples": [
+        {
+          "sample": 0,
+          "operations": 666,
+          "seconds": 0.15014590000000005,
+          "ops_per_second": 4435.685556515361,
+          "latency": {
+            "count": 666,
+            "min_ms": 0.0947,
+            "p50_ms": 0.2009,
+            "p95_ms": 0.3299,
+            "p99_ms": 0.7105,
+            "max_ms": 2.007,
+            "mean_ms": 0.2237198198198198
+          },
+          "server": {
+            "memory": {
+              "rss_bytes": 11694080,
+              "peak_rss_bytes": 11694080,
+              "source": "Linux /proc reference PID RSS/VmHWM"
+            },
+            "cpu_seconds": 0.04,
+            "metrics": null,
+            "lag_ns": [],
+            "lag_max_ns": null,
+            "sampled_peak_rss_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.04,
+          "maintenance": null
+        },
+        {
+          "sample": 1,
+          "operations": 794,
+          "seconds": 0.15021799999999885,
+          "ops_per_second": 5285.651519791277,
+          "latency": {
+            "count": 794,
+            "min_ms": 0.1066,
+            "p50_ms": 0.1699,
+            "p95_ms": 0.2794,
+            "p99_ms": 0.3473,
+            "max_ms": 0.4891,
+            "mean_ms": 0.18790906801007556
+          },
+          "server": {
+            "memory": {
+              "rss_bytes": 11694080,
+              "peak_rss_bytes": 11694080,
+              "source": "Linux /proc reference PID RSS/VmHWM"
+            },
+            "cpu_seconds": 0.08,
+            "metrics": null,
+            "lag_ns": [],
+            "lag_max_ns": null,
+            "sampled_peak_rss_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.04,
+          "maintenance": null
+        },
+        {
+          "sample": 2,
+          "operations": 841,
+          "seconds": 0.15011240000000114,
+          "ops_per_second": 5602.468550232983,
+          "latency": {
+            "count": 841,
+            "min_ms": 0.1233,
+            "p50_ms": 0.1702,
+            "p95_ms": 0.2182,
+            "p99_ms": 0.2667,
+            "max_ms": 0.3963,
+            "mean_ms": 0.17733412604042806
+          },
+          "server": {
+            "memory": {
+              "rss_bytes": 11694080,
+              "peak_rss_bytes": 11694080,
+              "source": "Linux /proc reference PID RSS/VmHWM"
+            },
+            "cpu_seconds": 0.11,
+            "metrics": null,
+            "lag_ns": [],
+            "lag_max_ns": null,
+            "sampled_peak_rss_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.03,
+          "maintenance": null
+        }
+      ],
+      "operations": 2301,
+      "ops_per_second": 5107.926876508264,
+      "latency": {
+        "count": 2301,
+        "min_ms": 0.0947,
+        "p50_ms": 0.1733,
+        "p95_ms": 0.288,
+        "p99_ms": 0.3795,
+        "max_ms": 2.007,
+        "mean_ms": 0.19440903954802258
+      },
+      "engine": "Redis 7.4.12",
+      "final": {
+        "memory": {
+          "rss_bytes": 11710464,
+          "peak_rss_bytes": 11710464,
+          "source": "Linux /proc reference PID RSS/VmHWM"
+        },
+        "cpu_seconds": 0.12,
+        "metrics": null,
+        "lag_ns": [],
+        "lag_max_ns": null,
+        "sampled_peak_rss_bytes": null,
+        "offset": null,
+        "journal_bytes": 0
+      }
+    },
+    {
+      "case": {
+        "command": "SET",
+        "clients": 10,
+        "keys": 512,
+        "payload_bytes": 32,
+        "mode": "memory"
+      },
+      "correctness": "passed",
+      "settings": {
+        "samples": 3,
+        "operations": 20,
+        "warmup": 4,
+        "minimum_seconds": 0.15
+      },
+      "samples": [
+        {
+          "sample": 0,
+          "operations": 1228,
+          "seconds": 0.15161859999999905,
+          "ops_per_second": 8099.270142317682,
+          "latency": {
+            "count": 1228,
+            "min_ms": 0.3855,
+            "p50_ms": 1.2115,
+            "p95_ms": 1.4972,
+            "p99_ms": 1.6378,
+            "max_ms": 1.8694,
+            "mean_ms": 1.2261873778501629
+          },
+          "server": {
+            "metrics": {
+              "connections_accepted": 10,
+              "connections_rejected": 0,
+              "connections_active": 10,
+              "commands": 1274,
+              "command_errors": 0,
+              "protocol_errors": 0,
+              "read_timeouts": 0,
+              "write_timeouts": 0,
+              "allocation_failures": 0,
+              "memory_accounted_bytes": 118784,
+              "maxmemory_bytes": 67108864,
+              "memory_rejections": 0,
+              "allocation_rejections": 0,
+              "keys_physical": 512,
+              "keys_expiring": 0,
+              "connections_owned": 10,
+              "client_tasks": 10,
+              "channels": 0,
+              "subscriptions": 0,
+              "pubsub_pending_bytes": 0,
+              "pubsub_pending_frames": 0
+            },
+            "memory": {
+              "rss_bytes": 27746304,
+              "peak_rss_bytes": 27836416,
+              "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+            },
+            "sampled_peak_rss_bytes": 27746304,
+            "lag_ns": [
+              1155900,
+              1664800,
+              1148800,
+              1305500,
+              1609100,
+              1429900,
+              1712700,
+              1509100,
+              1335400,
+              1145300,
+              1449900,
+              1148600,
+              1259200
+            ],
+            "lag_max_ns": 1712700,
+            "cpu_seconds": 0.4069833,
+            "traced_current_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.1518774,
+          "maintenance": null
+        },
+        {
+          "sample": 1,
+          "operations": 1175,
+          "seconds": 0.15149169999999756,
+          "ops_per_second": 7756.200504714245,
+          "latency": {
+            "count": 1175,
+            "min_ms": 0.3553,
+            "p50_ms": 1.2815,
+            "p95_ms": 1.5376,
+            "p99_ms": 1.749,
+            "max_ms": 1.9591,
+            "mean_ms": 1.2807707234042551
+          },
+          "server": {
+            "metrics": {
+              "connections_accepted": 10,
+              "connections_rejected": 0,
+              "connections_active": 10,
+              "commands": 2449,
+              "command_errors": 0,
+              "protocol_errors": 0,
+              "read_timeouts": 0,
+              "write_timeouts": 0,
+              "allocation_failures": 0,
+              "memory_accounted_bytes": 118784,
+              "maxmemory_bytes": 67108864,
+              "memory_rejections": 0,
+              "allocation_rejections": 0,
+              "keys_physical": 512,
+              "keys_expiring": 0,
+              "connections_owned": 10,
+              "client_tasks": 10,
+              "channels": 0,
+              "subscriptions": 0,
+              "pubsub_pending_bytes": 0,
+              "pubsub_pending_frames": 0
+            },
+            "memory": {
+              "rss_bytes": 27754496,
+              "peak_rss_bytes": 27836416,
+              "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+            },
+            "sampled_peak_rss_bytes": 27754496,
+            "lag_ns": [
+              1078000,
+              965800,
+              1290200,
+              1430900,
+              1489400,
+              1322600,
+              1626800,
+              1597200,
+              1373900,
+              1286600,
+              1613800,
+              1170900,
+              1303600
+            ],
+            "lag_max_ns": 1626800,
+            "cpu_seconds": 0.5590735,
+            "traced_current_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.15155410000000002,
+          "maintenance": null
+        },
+        {
+          "sample": 2,
+          "operations": 1314,
+          "seconds": 0.15159579999999906,
+          "ops_per_second": 8667.786310702593,
+          "latency": {
+            "count": 1314,
+            "min_ms": 0.36,
+            "p50_ms": 1.1129,
+            "p95_ms": 1.4596,
+            "p99_ms": 1.6993,
+            "max_ms": 1.8422,
+            "mean_ms": 1.1449719178082192
+          },
+          "server": {
+            "metrics": {
+              "connections_accepted": 10,
+              "connections_rejected": 0,
+              "connections_active": 10,
+              "commands": 3763,
+              "command_errors": 0,
+              "protocol_errors": 0,
+              "read_timeouts": 0,
+              "write_timeouts": 0,
+              "allocation_failures": 0,
+              "memory_accounted_bytes": 118784,
+              "maxmemory_bytes": 67108864,
+              "memory_rejections": 0,
+              "allocation_rejections": 0,
+              "keys_physical": 512,
+              "keys_expiring": 0,
+              "connections_owned": 10,
+              "client_tasks": 10,
+              "channels": 0,
+              "subscriptions": 0,
+              "pubsub_pending_bytes": 0,
+              "pubsub_pending_frames": 0
+            },
+            "memory": {
+              "rss_bytes": 27754496,
+              "peak_rss_bytes": 27836416,
+              "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+            },
+            "sampled_peak_rss_bytes": 27754496,
+            "lag_ns": [
+              1400700,
+              1215000,
+              997100,
+              1224800,
+              1326900,
+              1137700,
+              1376400,
+              1013700,
+              1171600,
+              1518100,
+              1485600,
+              1081500,
+              1294000
+            ],
+            "lag_max_ns": 1518100,
+            "cpu_seconds": 0.7112642,
+            "traced_current_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.1517712,
+          "maintenance": null
+        }
+      ],
+      "operations": 3717,
+      "ops_per_second": 8174.510964335062,
+      "latency": {
+        "count": 3717,
+        "min_ms": 0.3553,
+        "p50_ms": 1.2001,
+        "p95_ms": 1.4988,
+        "p99_ms": 1.6971,
+        "max_ms": 1.9591,
+        "mean_ms": 1.214731450094162
+      },
+      "engine": "PyRedis",
+      "final": {
+        "metrics": {
+          "connections_accepted": 10,
+          "connections_rejected": 0,
+          "connections_active": 10,
+          "commands": 3769,
+          "command_errors": 0,
+          "protocol_errors": 0,
+          "read_timeouts": 0,
+          "write_timeouts": 0,
+          "allocation_failures": 0,
+          "memory_accounted_bytes": 118784,
+          "maxmemory_bytes": 67108864,
+          "memory_rejections": 0,
+          "allocation_rejections": 0,
+          "keys_physical": 512,
+          "keys_expiring": 0,
+          "connections_owned": 10,
+          "client_tasks": 10,
+          "channels": 0,
+          "subscriptions": 0,
+          "pubsub_pending_bytes": 0,
+          "pubsub_pending_frames": 0
+        },
+        "memory": {
+          "rss_bytes": 27779072,
+          "peak_rss_bytes": 27836416,
+          "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+        },
+        "sampled_peak_rss_bytes": 27770880,
+        "lag_ns": [
+          1400700,
+          1215000,
+          997100,
+          1224800,
+          1326900,
+          1137700,
+          1376400,
+          1013700,
+          1171600,
+          1518100,
+          1485600,
+          1081500,
+          1294000,
+          611200
+        ],
+        "lag_max_ns": 1518100,
+        "cpu_seconds": 0.7164709,
+        "traced_current_bytes": null,
+        "offset": null,
+        "journal_bytes": 0
+      }
+    },
+    {
+      "case": {
+        "command": "SET",
+        "clients": 10,
+        "keys": 512,
+        "payload_bytes": 32,
+        "mode": "memory"
+      },
+      "correctness": "passed",
+      "settings": {
+        "samples": 3,
+        "operations": 20,
+        "warmup": 4,
+        "minimum_seconds": 0.15
+      },
+      "samples": [
+        {
+          "sample": 0,
+          "operations": 1939,
+          "seconds": 0.15046849999999878,
+          "ops_per_second": 12886.418087506792,
+          "latency": {
+            "count": 1939,
+            "min_ms": 0.1919,
+            "p50_ms": 0.7746,
+            "p95_ms": 0.9498,
+            "p99_ms": 1.3328,
+            "max_ms": 1.7665,
+            "mean_ms": 0.7733044352759154
+          },
+          "server": {
+            "memory": {
+              "rss_bytes": 11923456,
+              "peak_rss_bytes": 11923456,
+              "source": "Linux /proc reference PID RSS/VmHWM"
+            },
+            "cpu_seconds": 0.04,
+            "metrics": null,
+            "lag_ns": [],
+            "lag_max_ns": null,
+            "sampled_peak_rss_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.04,
+          "maintenance": null
+        },
+        {
+          "sample": 1,
+          "operations": 1916,
+          "seconds": 0.15070210000000017,
+          "ops_per_second": 12713.824160379967,
+          "latency": {
+            "count": 1916,
+            "min_ms": 0.1592,
+            "p50_ms": 0.8031,
+            "p95_ms": 0.9019,
+            "p99_ms": 1.0605,
+            "max_ms": 1.3198,
+            "mean_ms": 0.782740605427975
+          },
+          "server": {
+            "memory": {
+              "rss_bytes": 11927552,
+              "peak_rss_bytes": 11927552,
+              "source": "Linux /proc reference PID RSS/VmHWM"
+            },
+            "cpu_seconds": 0.09,
+            "metrics": null,
+            "lag_ns": [],
+            "lag_max_ns": null,
+            "sampled_peak_rss_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.049999999999999996,
+          "maintenance": null
+        },
+        {
+          "sample": 2,
+          "operations": 2051,
+          "seconds": 0.1508213999999981,
+          "ops_per_second": 13598.865943427298,
+          "latency": {
+            "count": 2051,
+            "min_ms": 0.1543,
+            "p50_ms": 0.7217,
+            "p95_ms": 0.8646,
+            "p99_ms": 0.9319,
+            "max_ms": 1.0378,
+            "mean_ms": 0.73127084349098
+          },
+          "server": {
+            "memory": {
+              "rss_bytes": 11931648,
+              "peak_rss_bytes": 11931648,
+              "source": "Linux /proc reference PID RSS/VmHWM"
+            },
+            "cpu_seconds": 0.14,
+            "metrics": null,
+            "lag_ns": [],
+            "lag_max_ns": null,
+            "sampled_peak_rss_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.05000000000000002,
+          "maintenance": null
+        }
+      ],
+      "operations": 5906,
+      "ops_per_second": 13066.602948724842,
+      "latency": {
+        "count": 5906,
+        "min_ms": 0.1543,
+        "p50_ms": 0.7599,
+        "p95_ms": 0.8983,
+        "p99_ms": 1.0628,
+        "max_ms": 1.7665,
+        "mean_ms": 0.7617685066034541
+      },
+      "engine": "Redis 7.4.12",
+      "final": {
+        "memory": {
+          "rss_bytes": 11952128,
+          "peak_rss_bytes": 11952128,
+          "source": "Linux /proc reference PID RSS/VmHWM"
+        },
+        "cpu_seconds": 0.14,
+        "metrics": null,
+        "lag_ns": [],
+        "lag_max_ns": null,
+        "sampled_peak_rss_bytes": null,
+        "offset": null,
+        "journal_bytes": 0
+      }
+    },
+    {
+      "case": {
+        "command": "SET",
+        "clients": 100,
+        "keys": 512,
+        "payload_bytes": 32,
+        "mode": "memory"
+      },
+      "correctness": "passed",
+      "settings": {
+        "samples": 3,
+        "operations": 20,
+        "warmup": 4,
+        "minimum_seconds": 0.15
+      },
+      "samples": [
+        {
+          "sample": 0,
+          "operations": 2000,
+          "seconds": 0.2403897999999991,
+          "ops_per_second": 8319.820558110234,
+          "latency": {
+            "count": 2000,
+            "min_ms": 2.9699,
+            "p50_ms": 11.9437,
+            "p95_ms": 13.1743,
+            "p99_ms": 13.5542,
+            "max_ms": 14.1968,
+            "mean_ms": 11.603199400000001
+          },
+          "server": {
+            "metrics": {
+              "connections_accepted": 100,
+              "connections_rejected": 0,
+              "connections_active": 100,
+              "commands": 2406,
+              "command_errors": 0,
+              "protocol_errors": 0,
+              "read_timeouts": 0,
+              "write_timeouts": 0,
+              "allocation_failures": 0,
+              "memory_accounted_bytes": 118784,
+              "maxmemory_bytes": 67108864,
+              "memory_rejections": 0,
+              "allocation_rejections": 0,
+              "keys_physical": 512,
+              "keys_expiring": 0,
+              "connections_owned": 100,
+              "client_tasks": 100,
+              "channels": 0,
+              "subscriptions": 0,
+              "pubsub_pending_bytes": 0,
+              "pubsub_pending_frames": 0
+            },
+            "memory": {
+              "rss_bytes": 28643328,
+              "peak_rss_bytes": 28176384,
+              "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+            },
+            "sampled_peak_rss_bytes": 28643328,
+            "lag_ns": [
+              17714200,
+              12816600,
+              13248300,
+              16507100,
+              12557500,
+              15039400,
+              13134200,
+              14262000,
+              14214200,
+              10011400
+            ],
+            "lag_max_ns": 17714200,
+            "cpu_seconds": 0.5567063,
+            "traced_current_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.24054759999999997,
+          "maintenance": null
+        },
+        {
+          "sample": 1,
+          "operations": 2000,
+          "seconds": 0.2412352999999996,
+          "ops_per_second": 8290.66061227359,
+          "latency": {
+            "count": 2000,
+            "min_ms": 3.6613,
+            "p50_ms": 12.031,
+            "p95_ms": 13.4641,
+            "p99_ms": 13.6591,
+            "max_ms": 13.8029,
+            "mean_ms": 11.679187
+          },
+          "server": {
+            "metrics": {
+              "connections_accepted": 100,
+              "connections_rejected": 0,
+              "connections_active": 100,
+              "commands": 4406,
+              "command_errors": 0,
+              "protocol_errors": 0,
+              "read_timeouts": 0,
+              "write_timeouts": 0,
+              "allocation_failures": 0,
+              "memory_accounted_bytes": 118784,
+              "maxmemory_bytes": 67108864,
+              "memory_rejections": 0,
+              "allocation_rejections": 0,
+              "keys_physical": 512,
+              "keys_expiring": 0,
+              "connections_owned": 100,
+              "client_tasks": 100,
+              "channels": 0,
+              "subscriptions": 0,
+              "pubsub_pending_bytes": 0,
+              "pubsub_pending_frames": 0
+            },
+            "memory": {
+              "rss_bytes": 28647424,
+              "peak_rss_bytes": 28176384,
+              "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+            },
+            "sampled_peak_rss_bytes": 28647424,
+            "lag_ns": [
+              12229300,
+              12565600,
+              14298900,
+              12611200,
+              15670800,
+              15485700,
+              16334400,
+              13218900,
+              14569400,
+              12012800
+            ],
+            "lag_max_ns": 16334400,
+            "cpu_seconds": 0.7984608,
+            "traced_current_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.24127999999999994,
+          "maintenance": null
+        },
+        {
+          "sample": 2,
+          "operations": 2000,
+          "seconds": 0.2532648000000002,
+          "ops_per_second": 7896.873154105895,
+          "latency": {
+            "count": 2000,
+            "min_ms": 3.1056,
+            "p50_ms": 12.7741,
+            "p95_ms": 14.1712,
+            "p99_ms": 14.3343,
+            "max_ms": 14.434,
+            "mean_ms": 12.2425611
+          },
+          "server": {
+            "metrics": {
+              "connections_accepted": 100,
+              "connections_rejected": 0,
+              "connections_active": 100,
+              "commands": 6406,
+              "command_errors": 0,
+              "protocol_errors": 0,
+              "read_timeouts": 0,
+              "write_timeouts": 0,
+              "allocation_failures": 0,
+              "memory_accounted_bytes": 118784,
+              "maxmemory_bytes": 67108864,
+              "memory_rejections": 0,
+              "allocation_rejections": 0,
+              "keys_physical": 512,
+              "keys_expiring": 0,
+              "connections_owned": 100,
+              "client_tasks": 100,
+              "channels": 0,
+              "subscriptions": 0,
+              "pubsub_pending_bytes": 0,
+              "pubsub_pending_frames": 0
+            },
+            "memory": {
+              "rss_bytes": 28651520,
+              "peak_rss_bytes": 28176384,
+              "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+            },
+            "sampled_peak_rss_bytes": 28651520,
+            "lag_ns": [
+              11794000,
+              11096400,
+              12240900,
+              15522800,
+              18002000,
+              17448900,
+              15379300,
+              16630900,
+              15090600,
+              15861800
+            ],
+            "lag_max_ns": 18002000,
+            "cpu_seconds": 1.0522218,
+            "traced_current_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.25327690000000014,
+          "maintenance": null
+        }
+      ],
+      "operations": 6000,
+      "ops_per_second": 8164.488313147329,
+      "latency": {
+        "count": 6000,
+        "min_ms": 2.9699,
+        "p50_ms": 12.1338,
+        "p95_ms": 13.7991,
+        "p99_ms": 14.2454,
+        "max_ms": 14.434,
+        "mean_ms": 11.841649166666667
+      },
+      "engine": "PyRedis",
+      "final": {
+        "metrics": {
+          "connections_accepted": 100,
+          "connections_rejected": 0,
+          "connections_active": 100,
+          "commands": 6412,
+          "command_errors": 0,
+          "protocol_errors": 0,
+          "read_timeouts": 0,
+          "write_timeouts": 0,
+          "allocation_failures": 0,
+          "memory_accounted_bytes": 118784,
+          "maxmemory_bytes": 67108864,
+          "memory_rejections": 0,
+          "allocation_rejections": 0,
+          "keys_physical": 512,
+          "keys_expiring": 0,
+          "connections_owned": 100,
+          "client_tasks": 100,
+          "channels": 0,
+          "subscriptions": 0,
+          "pubsub_pending_bytes": 0,
+          "pubsub_pending_frames": 0
+        },
+        "memory": {
+          "rss_bytes": 28663808,
+          "peak_rss_bytes": 28176384,
+          "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+        },
+        "sampled_peak_rss_bytes": 28655616,
+        "lag_ns": [
+          11794000,
+          11096400,
+          12240900,
+          15522800,
+          18002000,
+          17448900,
+          15379300,
+          16630900,
+          15090600,
+          15861800,
+          523800
+        ],
+        "lag_max_ns": 18002000,
+        "cpu_seconds": 1.0579535,
+        "traced_current_bytes": null,
+        "offset": null,
+        "journal_bytes": 0
+      }
+    },
+    {
+      "case": {
+        "command": "SET",
+        "clients": 100,
+        "keys": 512,
+        "payload_bytes": 32,
+        "mode": "memory"
+      },
+      "correctness": "passed",
+      "settings": {
+        "samples": 3,
+        "operations": 20,
+        "warmup": 4,
+        "minimum_seconds": 0.15
+      },
+      "samples": [
+        {
+          "sample": 0,
+          "operations": 2000,
+          "seconds": 0.17109430000000003,
+          "ops_per_second": 11689.460139817631,
+          "latency": {
+            "count": 2000,
+            "min_ms": 1.4613,
+            "p50_ms": 7.9167,
+            "p95_ms": 12.6959,
+            "p99_ms": 13.5653,
+            "max_ms": 13.7927,
+            "mean_ms": 8.37919475
+          },
+          "server": {
+            "memory": {
+              "rss_bytes": 12648448,
+              "peak_rss_bytes": 12648448,
+              "source": "Linux /proc reference PID RSS/VmHWM"
+            },
+            "cpu_seconds": 0.06,
+            "metrics": null,
+            "lag_ns": [],
+            "lag_max_ns": null,
+            "sampled_peak_rss_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.049999999999999996,
+          "maintenance": null
+        },
+        {
+          "sample": 1,
+          "operations": 2000,
+          "seconds": 0.16764059999999859,
+          "ops_per_second": 11930.284191299821,
+          "latency": {
+            "count": 2000,
+            "min_ms": 1.4902,
+            "p50_ms": 8.3052,
+            "p95_ms": 9.9528,
+            "p99_ms": 10.2244,
+            "max_ms": 10.3672,
+            "mean_ms": 8.176542849999999
+          },
+          "server": {
+            "memory": {
+              "rss_bytes": 12648448,
+              "peak_rss_bytes": 12648448,
+              "source": "Linux /proc reference PID RSS/VmHWM"
+            },
+            "cpu_seconds": 0.11,
+            "metrics": null,
+            "lag_ns": [],
+            "lag_max_ns": null,
+            "sampled_peak_rss_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.05,
+          "maintenance": null
+        },
+        {
+          "sample": 2,
+          "operations": 2000,
+          "seconds": 0.15804220000000058,
+          "ops_per_second": 12654.847882400984,
+          "latency": {
+            "count": 2000,
+            "min_ms": 1.4119,
+            "p50_ms": 7.9307,
+            "p95_ms": 8.8756,
+            "p99_ms": 9.2617,
+            "max_ms": 9.3304,
+            "mean_ms": 7.745771
+          },
+          "server": {
+            "memory": {
+              "rss_bytes": 12648448,
+              "peak_rss_bytes": 12648448,
+              "source": "Linux /proc reference PID RSS/VmHWM"
+            },
+            "cpu_seconds": 0.16,
+            "metrics": null,
+            "lag_ns": [],
+            "lag_max_ns": null,
+            "sampled_peak_rss_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.05,
+          "maintenance": null
+        }
+      ],
+      "operations": 6000,
+      "ops_per_second": 12077.851414648561,
+      "latency": {
+        "count": 6000,
+        "min_ms": 1.4119,
+        "p50_ms": 8.0473,
+        "p95_ms": 10.2761,
+        "p99_ms": 13.2182,
+        "max_ms": 13.7927,
+        "mean_ms": 8.100502866666666
+      },
+      "engine": "Redis 7.4.12",
+      "final": {
+        "memory": {
+          "rss_bytes": 12652544,
+          "peak_rss_bytes": 12652544,
+          "source": "Linux /proc reference PID RSS/VmHWM"
+        },
+        "cpu_seconds": 0.17,
+        "metrics": null,
+        "lag_ns": [],
+        "lag_max_ns": null,
+        "sampled_peak_rss_bytes": null,
+        "offset": null,
+        "journal_bytes": 0
+      }
+    },
+    {
+      "case": {
+        "command": "INCR",
+        "clients": 1,
+        "keys": 512,
+        "payload_bytes": 1,
+        "mode": "memory"
+      },
+      "correctness": "passed",
+      "settings": {
+        "samples": 3,
+        "operations": 20,
+        "warmup": 4,
+        "minimum_seconds": 0.15
+      },
+      "samples": [
+        {
+          "sample": 0,
+          "operations": 427,
+          "seconds": 0.15033460000000076,
+          "ops_per_second": 2840.3308353499315,
+          "latency": {
+            "count": 427,
+            "min_ms": 0.2501,
+            "p50_ms": 0.3388,
+            "p95_ms": 0.4444,
+            "p99_ms": 0.6098,
+            "max_ms": 0.7893,
+            "mean_ms": 0.3506381733021077
+          },
+          "server": {
+            "metrics": {
+              "connections_accepted": 1,
+              "connections_rejected": 0,
+              "connections_active": 1,
+              "commands": 437,
+              "command_errors": 0,
+              "protocol_errors": 0,
+              "read_timeouts": 0,
+              "write_timeouts": 0,
+              "allocation_failures": 0,
+              "memory_accounted_bytes": 102912,
+              "maxmemory_bytes": 67108864,
+              "memory_rejections": 0,
+              "allocation_rejections": 0,
+              "keys_physical": 512,
+              "keys_expiring": 0,
+              "connections_owned": 1,
+              "client_tasks": 1,
+              "channels": 0,
+              "subscriptions": 0,
+              "pubsub_pending_bytes": 0,
+              "pubsub_pending_frames": 0
+            },
+            "memory": {
+              "rss_bytes": 27746304,
+              "peak_rss_bytes": 28098560,
+              "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+            },
+            "sampled_peak_rss_bytes": 27742208,
+            "lag_ns": [
+              279200,
+              46700,
+              255900,
+              28500,
+              209700,
+              403800,
+              330400,
+              268100,
+              288800,
+              290600,
+              160600,
+              279800,
+              251400,
+              29200
+            ],
+            "lag_max_ns": 403800,
+            "cpu_seconds": 0.3599364,
+            "traced_current_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.08207379999999997,
+          "maintenance": null
+        },
+        {
+          "sample": 1,
+          "operations": 409,
+          "seconds": 0.15037430000000285,
+          "ops_per_second": 2719.879660287644,
+          "latency": {
+            "count": 409,
+            "min_ms": 0.2491,
+            "p50_ms": 0.3498,
+            "p95_ms": 0.4694,
+            "p99_ms": 0.5861,
+            "max_ms": 0.7452,
+            "mean_ms": 0.36581075794621026
+          },
+          "server": {
+            "metrics": {
+              "connections_accepted": 1,
+              "connections_rejected": 0,
+              "connections_active": 1,
+              "commands": 846,
+              "command_errors": 0,
+              "protocol_errors": 0,
+              "read_timeouts": 0,
+              "write_timeouts": 0,
+              "allocation_failures": 0,
+              "memory_accounted_bytes": 102912,
+              "maxmemory_bytes": 67108864,
+              "memory_rejections": 0,
+              "allocation_rejections": 0,
+              "keys_physical": 512,
+              "keys_expiring": 0,
+              "connections_owned": 1,
+              "client_tasks": 1,
+              "channels": 0,
+              "subscriptions": 0,
+              "pubsub_pending_bytes": 0,
+              "pubsub_pending_frames": 0
+            },
+            "memory": {
+              "rss_bytes": 27746304,
+              "peak_rss_bytes": 28098560,
+              "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+            },
+            "sampled_peak_rss_bytes": 27746304,
+            "lag_ns": [
+              161500,
+              49400,
+              274200,
+              223200,
+              322700,
+              85800,
+              104100,
+              203300,
+              212500,
+              156400,
+              270400,
+              270900,
+              152700,
+              318300,
+              153300
+            ],
+            "lag_max_ns": 322700,
+            "cpu_seconds": 0.4427107,
+            "traced_current_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.08237919999999999,
+          "maintenance": null
+        },
+        {
+          "sample": 2,
+          "operations": 426,
+          "seconds": 0.15016220000000047,
+          "ops_per_second": 2836.932330506603,
+          "latency": {
+            "count": 426,
+            "min_ms": 0.2228,
+            "p50_ms": 0.3409,
+            "p95_ms": 0.4347,
+            "p99_ms": 0.4944,
+            "max_ms": 0.5886,
+            "mean_ms": 0.35102441314553995
+          },
+          "server": {
+            "metrics": {
+              "connections_accepted": 1,
+              "connections_rejected": 0,
+              "connections_active": 1,
+              "commands": 1272,
+              "command_errors": 0,
+              "protocol_errors": 0,
+              "read_timeouts": 0,
+              "write_timeouts": 0,
+              "allocation_failures": 0,
+              "memory_accounted_bytes": 102912,
+              "maxmemory_bytes": 67108864,
+              "memory_rejections": 0,
+              "allocation_rejections": 0,
+              "keys_physical": 512,
+              "keys_expiring": 0,
+              "connections_owned": 1,
+              "client_tasks": 1,
+              "channels": 0,
+              "subscriptions": 0,
+              "pubsub_pending_bytes": 0,
+              "pubsub_pending_frames": 0
+            },
+            "memory": {
+              "rss_bytes": 27746304,
+              "peak_rss_bytes": 28098560,
+              "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+            },
+            "sampled_peak_rss_bytes": 27746304,
+            "lag_ns": [
+              34500,
+              320300,
+              314700,
+              286000,
+              83800,
+              147500,
+              261300,
+              298300,
+              262000,
+              113000,
+              237700,
+              275900,
+              162700,
+              287500,
+              136000
+            ],
+            "lag_max_ns": 320300,
+            "cpu_seconds": 0.5258053,
+            "traced_current_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.08272640000000003,
+          "maintenance": null
+        }
+      ],
+      "operations": 1262,
+      "ops_per_second": 2799.0261518203065,
+      "latency": {
+        "count": 1262,
+        "min_ms": 0.2228,
+        "p50_ms": 0.3437,
+        "p95_ms": 0.4473,
+        "p99_ms": 0.5886,
+        "max_ms": 0.7893,
+        "mean_ms": 0.35568581616481776
+      },
+      "engine": "PyRedis",
+      "final": {
+        "metrics": {
+          "connections_accepted": 1,
+          "connections_rejected": 0,
+          "connections_active": 1,
+          "commands": 1278,
+          "command_errors": 0,
+          "protocol_errors": 0,
+          "read_timeouts": 0,
+          "write_timeouts": 0,
+          "allocation_failures": 0,
+          "memory_accounted_bytes": 102912,
+          "maxmemory_bytes": 67108864,
+          "memory_rejections": 0,
+          "allocation_rejections": 0,
+          "keys_physical": 512,
+          "keys_expiring": 0,
+          "connections_owned": 1,
+          "client_tasks": 1,
+          "channels": 0,
+          "subscriptions": 0,
+          "pubsub_pending_bytes": 0,
+          "pubsub_pending_frames": 0
+        },
+        "memory": {
+          "rss_bytes": 27766784,
+          "peak_rss_bytes": 28098560,
+          "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+        },
+        "sampled_peak_rss_bytes": 27766784,
+        "lag_ns": [
+          34500,
+          320300,
+          314700,
+          286000,
+          83800,
+          147500,
+          261300,
+          298300,
+          262000,
+          113000,
+          237700,
+          275900,
+          162700,
+          287500,
+          136000,
+          724700
+        ],
+        "lag_max_ns": 724700,
+        "cpu_seconds": 0.5306197,
+        "traced_current_bytes": null,
+        "offset": null,
+        "journal_bytes": 0
+      }
+    },
+    {
+      "case": {
+        "command": "INCR",
+        "clients": 1,
+        "keys": 512,
+        "payload_bytes": 1,
+        "mode": "memory"
+      },
+      "correctness": "passed",
+      "settings": {
+        "samples": 3,
+        "operations": 20,
+        "warmup": 4,
+        "minimum_seconds": 0.15
+      },
+      "samples": [
+        {
+          "sample": 0,
+          "operations": 619,
+          "seconds": 0.15014029999999678,
+          "ops_per_second": 4122.810464612187,
+          "latency": {
+            "count": 619,
+            "min_ms": 0.1556,
+            "p50_ms": 0.2155,
+            "p95_ms": 0.3662,
+            "p99_ms": 0.4753,
+            "max_ms": 0.554,
+            "mean_ms": 0.2411290791599354
+          },
+          "server": {
+            "memory": {
+              "rss_bytes": 11550720,
+              "peak_rss_bytes": 11550720,
+              "source": "Linux /proc reference PID RSS/VmHWM"
+            },
+            "cpu_seconds": 0.04,
+            "metrics": null,
+            "lag_ns": [],
+            "lag_max_ns": null,
+            "sampled_peak_rss_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.04,
+          "maintenance": null
+        },
+        {
+          "sample": 1,
+          "operations": 813,
+          "seconds": 0.1500975000000011,
+          "ops_per_second": 5416.479288462459,
+          "latency": {
+            "count": 813,
+            "min_ms": 0.1199,
+            "p50_ms": 0.1741,
+            "p95_ms": 0.2415,
+            "p99_ms": 0.3224,
+            "max_ms": 0.4482,
+            "mean_ms": 0.18352226322263224
+          },
+          "server": {
+            "memory": {
+              "rss_bytes": 11550720,
+              "peak_rss_bytes": 11550720,
+              "source": "Linux /proc reference PID RSS/VmHWM"
+            },
+            "cpu_seconds": 0.08,
+            "metrics": null,
+            "lag_ns": [],
+            "lag_max_ns": null,
+            "sampled_peak_rss_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.04,
+          "maintenance": null
+        },
+        {
+          "sample": 2,
+          "operations": 774,
+          "seconds": 0.15022149999999712,
+          "ops_per_second": 5152.391635019054,
+          "latency": {
+            "count": 774,
+            "min_ms": 0.1266,
+            "p50_ms": 0.1805,
+            "p95_ms": 0.2541,
+            "p99_ms": 0.3565,
+            "max_ms": 0.4863,
+            "mean_ms": 0.19273423772609818
+          },
+          "server": {
+            "memory": {
+              "rss_bytes": 11550720,
+              "peak_rss_bytes": 11550720,
+              "source": "Linux /proc reference PID RSS/VmHWM"
+            },
+            "cpu_seconds": 0.11,
+            "metrics": null,
+            "lag_ns": [],
+            "lag_max_ns": null,
+            "sampled_peak_rss_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.03,
+          "maintenance": null
+        }
+      ],
+      "operations": 2206,
+      "ops_per_second": 4897.2237891414925,
+      "latency": {
+        "count": 2206,
+        "min_ms": 0.1199,
+        "p50_ms": 0.1836,
+        "p95_ms": 0.3109,
+        "p99_ms": 0.4164,
+        "max_ms": 0.554,
+        "mean_ms": 0.2029187669990934
+      },
+      "engine": "Redis 7.4.12",
+      "final": {
+        "memory": {
+          "rss_bytes": 11554816,
+          "peak_rss_bytes": 11554816,
+          "source": "Linux /proc reference PID RSS/VmHWM"
+        },
+        "cpu_seconds": 0.11,
+        "metrics": null,
+        "lag_ns": [],
+        "lag_max_ns": null,
+        "sampled_peak_rss_bytes": null,
+        "offset": null,
+        "journal_bytes": 0
+      }
+    },
+    {
+      "case": {
+        "command": "INCR",
+        "clients": 10,
+        "keys": 512,
+        "payload_bytes": 1,
+        "mode": "memory"
+      },
+      "correctness": "passed",
+      "settings": {
+        "samples": 3,
+        "operations": 20,
+        "warmup": 4,
+        "minimum_seconds": 0.15
+      },
+      "samples": [
+        {
+          "sample": 0,
+          "operations": 1354,
+          "seconds": 0.15178639999999888,
+          "ops_per_second": 8920.430288879703,
+          "latency": {
+            "count": 1354,
+            "min_ms": 0.395,
+            "p50_ms": 1.0924,
+            "p95_ms": 1.3633,
+            "p99_ms": 1.7247,
+            "max_ms": 2.2003,
+            "mean_ms": 1.1132085672082717
+          },
+          "server": {
+            "metrics": {
+              "connections_accepted": 10,
+              "connections_rejected": 0,
+              "connections_active": 10,
+              "commands": 1400,
+              "command_errors": 0,
+              "protocol_errors": 0,
+              "read_timeouts": 0,
+              "write_timeouts": 0,
+              "allocation_failures": 0,
+              "memory_accounted_bytes": 103043,
+              "maxmemory_bytes": 67108864,
+              "memory_rejections": 0,
+              "allocation_rejections": 0,
+              "keys_physical": 512,
+              "keys_expiring": 0,
+              "connections_owned": 10,
+              "client_tasks": 10,
+              "channels": 0,
+              "subscriptions": 0,
+              "pubsub_pending_bytes": 0,
+              "pubsub_pending_frames": 0
+            },
+            "memory": {
+              "rss_bytes": 27807744,
+              "peak_rss_bytes": 28229632,
+              "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+            },
+            "sampled_peak_rss_bytes": 27807744,
+            "lag_ns": [
+              958200,
+              1133800,
+              931100,
+              1204900,
+              973600,
+              1125800,
+              1531600,
+              1209700,
+              924400,
+              1118300,
+              1187400,
+              1465900,
+              1200100,
+              1468800
+            ],
+            "lag_max_ns": 1531600,
+            "cpu_seconds": 0.4314716,
+            "traced_current_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.15199640000000003,
+          "maintenance": null
+        },
+        {
+          "sample": 1,
+          "operations": 1290,
+          "seconds": 0.15121170000000106,
+          "ops_per_second": 8531.085888195099,
+          "latency": {
+            "count": 1290,
+            "min_ms": 0.3764,
+            "p50_ms": 1.1353,
+            "p95_ms": 1.4891,
+            "p99_ms": 1.8345,
+            "max_ms": 1.9924,
+            "mean_ms": 1.1643730232558138
+          },
+          "server": {
+            "metrics": {
+              "connections_accepted": 10,
+              "connections_rejected": 0,
+              "connections_active": 10,
+              "commands": 2690,
+              "command_errors": 0,
+              "protocol_errors": 0,
+              "read_timeouts": 0,
+              "write_timeouts": 0,
+              "allocation_failures": 0,
+              "memory_accounted_bytes": 103172,
+              "maxmemory_bytes": 67108864,
+              "memory_rejections": 0,
+              "allocation_rejections": 0,
+              "keys_physical": 512,
+              "keys_expiring": 0,
+              "connections_owned": 10,
+              "client_tasks": 10,
+              "channels": 0,
+              "subscriptions": 0,
+              "pubsub_pending_bytes": 0,
+              "pubsub_pending_frames": 0
+            },
+            "memory": {
+              "rss_bytes": 27811840,
+              "peak_rss_bytes": 28229632,
+              "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+            },
+            "sampled_peak_rss_bytes": 27811840,
+            "lag_ns": [
+              1167200,
+              1384700,
+              1190000,
+              929100,
+              2056600,
+              1343900,
+              1397700,
+              1037600,
+              1105700,
+              1083700,
+              1113200,
+              1182400,
+              1154500
+            ],
+            "lag_max_ns": 2056600,
+            "cpu_seconds": 0.5834292,
+            "traced_current_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.1515259,
+          "maintenance": null
+        },
+        {
+          "sample": 2,
+          "operations": 1210,
+          "seconds": 0.15131119999999854,
+          "ops_per_second": 7996.764284468114,
+          "latency": {
+            "count": 1210,
+            "min_ms": 0.3564,
+            "p50_ms": 1.201,
+            "p95_ms": 1.7265,
+            "p99_ms": 1.9458,
+            "max_ms": 2.1811,
+            "mean_ms": 1.2419667768595042
+          },
+          "server": {
+            "metrics": {
+              "connections_accepted": 10,
+              "connections_rejected": 0,
+              "connections_active": 10,
+              "commands": 3900,
+              "command_errors": 0,
+              "protocol_errors": 0,
+              "read_timeouts": 0,
+              "write_timeouts": 0,
+              "allocation_failures": 0,
+              "memory_accounted_bytes": 103293,
+              "maxmemory_bytes": 67108864,
+              "memory_rejections": 0,
+              "allocation_rejections": 0,
+              "keys_physical": 512,
+              "keys_expiring": 0,
+              "connections_owned": 10,
+              "client_tasks": 10,
+              "channels": 0,
+              "subscriptions": 0,
+              "pubsub_pending_bytes": 0,
+              "pubsub_pending_frames": 0
+            },
+            "memory": {
+              "rss_bytes": 27811840,
+              "peak_rss_bytes": 28229632,
+              "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+            },
+            "sampled_peak_rss_bytes": 27811840,
+            "lag_ns": [
+              1964300,
+              1289400,
+              1270200,
+              1522000,
+              1442100,
+              1193000,
+              1346000,
+              1582700,
+              1964300,
+              1028000,
+              1145600,
+              971900,
+              1329800
+            ],
+            "lag_max_ns": 1964300,
+            "cpu_seconds": 0.7355869,
+            "traced_current_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.15166570000000001,
+          "maintenance": null
+        }
+      ],
+      "operations": 3854,
+      "ops_per_second": 8483.207365554728,
+      "latency": {
+        "count": 3854,
+        "min_ms": 0.3564,
+        "p50_ms": 1.1323,
+        "p95_ms": 1.5539,
+        "p99_ms": 1.9002,
+        "max_ms": 2.2003,
+        "mean_ms": 1.1707590555267255
+      },
+      "engine": "PyRedis",
+      "final": {
+        "metrics": {
+          "connections_accepted": 10,
+          "connections_rejected": 0,
+          "connections_active": 10,
+          "commands": 3906,
+          "command_errors": 0,
+          "protocol_errors": 0,
+          "read_timeouts": 0,
+          "write_timeouts": 0,
+          "allocation_failures": 0,
+          "memory_accounted_bytes": 103293,
+          "maxmemory_bytes": 67108864,
+          "memory_rejections": 0,
+          "allocation_rejections": 0,
+          "keys_physical": 512,
+          "keys_expiring": 0,
+          "connections_owned": 10,
+          "client_tasks": 10,
+          "channels": 0,
+          "subscriptions": 0,
+          "pubsub_pending_bytes": 0,
+          "pubsub_pending_frames": 0
+        },
+        "memory": {
+          "rss_bytes": 27828224,
+          "peak_rss_bytes": 28229632,
+          "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+        },
+        "sampled_peak_rss_bytes": 27820032,
+        "lag_ns": [
+          1964300,
+          1289400,
+          1270200,
+          1522000,
+          1442100,
+          1193000,
+          1346000,
+          1582700,
+          1964300,
+          1028000,
+          1145600,
+          971900,
+          1329800,
+          2223600
+        ],
+        "lag_max_ns": 2223600,
+        "cpu_seconds": 0.7429545,
+        "traced_current_bytes": null,
+        "offset": null,
+        "journal_bytes": 0
+      }
+    },
+    {
+      "case": {
+        "command": "INCR",
+        "clients": 10,
+        "keys": 512,
+        "payload_bytes": 1,
+        "mode": "memory"
+      },
+      "correctness": "passed",
+      "settings": {
+        "samples": 3,
+        "operations": 20,
+        "warmup": 4,
+        "minimum_seconds": 0.15
+      },
+      "samples": [
+        {
+          "sample": 0,
+          "operations": 1874,
+          "seconds": 0.15083483100000095,
+          "ops_per_second": 12424.186029021295,
+          "latency": {
+            "count": 1874,
+            "min_ms": 0.3986,
+            "p50_ms": 0.7787,
+            "p95_ms": 1.1017,
+            "p99_ms": 1.283787,
+            "max_ms": 1.4505,
+            "mean_ms": 0.8009089386339381
+          },
+          "server": {
+            "memory": {
+              "rss_bytes": 11522048,
+              "peak_rss_bytes": 11522048,
+              "source": "Linux /proc reference PID RSS/VmHWM"
+            },
+            "cpu_seconds": 0.04,
+            "metrics": null,
+            "lag_ns": [],
+            "lag_max_ns": null,
+            "sampled_peak_rss_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.04,
+          "maintenance": null
+        },
+        {
+          "sample": 1,
+          "operations": 1832,
+          "seconds": 0.15064780600000205,
+          "ops_per_second": 12160.814343356418,
+          "latency": {
+            "count": 1832,
+            "min_ms": 0.306297,
+            "p50_ms": 0.778891,
+            "p95_ms": 1.192187,
+            "p99_ms": 1.576383,
+            "max_ms": 2.173277,
+            "mean_ms": 0.8187494137554585
+          },
+          "server": {
+            "memory": {
+              "rss_bytes": 11530240,
+              "peak_rss_bytes": 11530240,
+              "source": "Linux /proc reference PID RSS/VmHWM"
+            },
+            "cpu_seconds": 0.08,
+            "metrics": null,
+            "lag_ns": [],
+            "lag_max_ns": null,
+            "sampled_peak_rss_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.04,
+          "maintenance": null
+        },
+        {
+          "sample": 2,
+          "operations": 1861,
+          "seconds": 0.15067520499999887,
+          "ops_per_second": 12351.069971997144,
+          "latency": {
+            "count": 1861,
+            "min_ms": 0.243098,
+            "p50_ms": 0.791992,
+            "p95_ms": 1.106689,
+            "p99_ms": 1.226087,
+            "max_ms": 1.485184,
+            "mean_ms": 0.8061993089736701
+          },
+          "server": {
+            "memory": {
+              "rss_bytes": 11534336,
+              "peak_rss_bytes": 11534336,
+              "source": "Linux /proc reference PID RSS/VmHWM"
+            },
+            "cpu_seconds": 0.14,
+            "metrics": null,
+            "lag_ns": [],
+            "lag_max_ns": null,
+            "sampled_peak_rss_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.06000000000000001,
+          "maintenance": null
+        }
+      ],
+      "operations": 5567,
+      "ops_per_second": 12312.072207740184,
+      "latency": {
+        "count": 5567,
+        "min_ms": 0.243098,
+        "p50_ms": 0.7833,
+        "p95_ms": 1.122,
+        "p99_ms": 1.3974,
+        "max_ms": 2.173277,
+        "mean_ms": 0.8085484445841566
+      },
+      "engine": "Redis 7.4.12",
+      "final": {
+        "memory": {
+          "rss_bytes": 11542528,
+          "peak_rss_bytes": 11542528,
+          "source": "Linux /proc reference PID RSS/VmHWM"
+        },
+        "cpu_seconds": 0.14,
+        "metrics": null,
+        "lag_ns": [],
+        "lag_max_ns": null,
+        "sampled_peak_rss_bytes": null,
+        "offset": null,
+        "journal_bytes": 0
+      }
+    },
+    {
+      "case": {
+        "command": "INCR",
+        "clients": 100,
+        "keys": 512,
+        "payload_bytes": 1,
+        "mode": "memory"
+      },
+      "correctness": "passed",
+      "settings": {
+        "samples": 3,
+        "operations": 20,
+        "warmup": 4,
+        "minimum_seconds": 0.15
+      },
+      "samples": [
+        {
+          "sample": 0,
+          "operations": 2000,
+          "seconds": 0.2218289060000025,
+          "ops_per_second": 9015.957550635792,
+          "latency": {
+            "count": 2000,
+            "min_ms": 2.702998,
+            "p50_ms": 11.116095,
+            "p95_ms": 12.050395,
+            "p99_ms": 12.215295,
+            "max_ms": 12.329794,
+            "mean_ms": 10.7136068135
+          },
+          "server": {
+            "metrics": {
+              "connections_accepted": 100,
+              "connections_rejected": 0,
+              "connections_active": 100,
+              "commands": 2406,
+              "command_errors": 0,
+              "protocol_errors": 0,
+              "read_timeouts": 0,
+              "write_timeouts": 0,
+              "allocation_failures": 0,
+              "memory_accounted_bytes": 103017,
+              "maxmemory_bytes": 67108864,
+              "memory_rejections": 0,
+              "allocation_rejections": 0,
+              "keys_physical": 512,
+              "keys_expiring": 0,
+              "connections_owned": 100,
+              "client_tasks": 100,
+              "channels": 0,
+              "subscriptions": 0,
+              "pubsub_pending_bytes": 0,
+              "pubsub_pending_frames": 0
+            },
+            "memory": {
+              "rss_bytes": 28651520,
+              "peak_rss_bytes": 28270592,
+              "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+            },
+            "sampled_peak_rss_bytes": 28651520,
+            "lag_ns": [
+              17927588,
+              12697191,
+              11415390,
+              12772191,
+              13528390,
+              10179391,
+              10176392,
+              11522090,
+              12391691,
+              8734392
+            ],
+            "lag_max_ns": 17927588,
+            "cpu_seconds": 0.553344,
+            "traced_current_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.22208919999999993,
+          "maintenance": null
+        },
+        {
+          "sample": 1,
+          "operations": 2000,
+          "seconds": 0.2425450970000007,
+          "ops_per_second": 8245.889217047312,
+          "latency": {
+            "count": 2000,
+            "min_ms": 3.183398,
+            "p50_ms": 11.819495,
+            "p95_ms": 13.579594,
+            "p99_ms": 15.604394,
+            "max_ms": 17.767692,
+            "mean_ms": 11.529575853
+          },
+          "server": {
+            "metrics": {
+              "connections_accepted": 100,
+              "connections_rejected": 0,
+              "connections_active": 100,
+              "commands": 4406,
+              "command_errors": 0,
+              "protocol_errors": 0,
+              "read_timeouts": 0,
+              "write_timeouts": 0,
+              "allocation_failures": 0,
+              "memory_accounted_bytes": 103037,
+              "maxmemory_bytes": 67108864,
+              "memory_rejections": 0,
+              "allocation_rejections": 0,
+              "keys_physical": 512,
+              "keys_expiring": 0,
+              "connections_owned": 100,
+              "client_tasks": 100,
+              "channels": 0,
+              "subscriptions": 0,
+              "pubsub_pending_bytes": 0,
+              "pubsub_pending_frames": 0
+            },
+            "memory": {
+              "rss_bytes": 28655616,
+              "peak_rss_bytes": 28270592,
+              "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+            },
+            "sampled_peak_rss_bytes": 28655616,
+            "lag_ns": [
+              13233690,
+              10824591,
+              12536191,
+              13806889,
+              15510590,
+              15646189,
+              13305390,
+              13678390,
+              15425890,
+              19382087
+            ],
+            "lag_max_ns": 19382087,
+            "cpu_seconds": 0.7966691,
+            "traced_current_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.24267300000000003,
+          "maintenance": null
+        },
+        {
+          "sample": 2,
+          "operations": 2000,
+          "seconds": 0.25980938900000083,
+          "ops_per_second": 7697.951208376051,
+          "latency": {
+            "count": 2000,
+            "min_ms": 4.832098,
+            "p50_ms": 12.537294,
+            "p95_ms": 14.591294,
+            "p99_ms": 15.860693,
+            "max_ms": 16.114893,
+            "mean_ms": 12.540804957
+          },
+          "server": {
+            "metrics": {
+              "connections_accepted": 100,
+              "connections_rejected": 0,
+              "connections_active": 100,
+              "commands": 6406,
+              "command_errors": 0,
+              "protocol_errors": 0,
+              "read_timeouts": 0,
+              "write_timeouts": 0,
+              "allocation_failures": 0,
+              "memory_accounted_bytes": 103057,
+              "maxmemory_bytes": 67108864,
+              "memory_rejections": 0,
+              "allocation_rejections": 0,
+              "keys_physical": 512,
+              "keys_expiring": 0,
+              "connections_owned": 100,
+              "client_tasks": 100,
+              "channels": 0,
+              "subscriptions": 0,
+              "pubsub_pending_bytes": 0,
+              "pubsub_pending_frames": 0
+            },
+            "memory": {
+              "rss_bytes": 28655616,
+              "peak_rss_bytes": 28270592,
+              "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+            },
+            "sampled_peak_rss_bytes": 28655616,
+            "lag_ns": [
+              14227590,
+              17396188,
+              17353588,
+              17555588,
+              14460090,
+              15548989,
+              15706989,
+              12687690,
+              14525990,
+              13305590
+            ],
+            "lag_max_ns": 17555588,
+            "cpu_seconds": 1.0573959,
+            "traced_current_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.25999779999999995,
+          "maintenance": null
+        }
+      ],
+      "operations": 6000,
+      "ops_per_second": 8285.194145960153,
+      "latency": {
+        "count": 6000,
+        "min_ms": 2.702998,
+        "p50_ms": 11.737995,
+        "p95_ms": 13.987494,
+        "p99_ms": 15.669593,
+        "max_ms": 17.767692,
+        "mean_ms": 11.594662541166667
+      },
+      "engine": "PyRedis",
+      "final": {
+        "metrics": {
+          "connections_accepted": 100,
+          "connections_rejected": 0,
+          "connections_active": 100,
+          "commands": 6412,
+          "command_errors": 0,
+          "protocol_errors": 0,
+          "read_timeouts": 0,
+          "write_timeouts": 0,
+          "allocation_failures": 0,
+          "memory_accounted_bytes": 103057,
+          "maxmemory_bytes": 67108864,
+          "memory_rejections": 0,
+          "allocation_rejections": 0,
+          "keys_physical": 512,
+          "keys_expiring": 0,
+          "connections_owned": 100,
+          "client_tasks": 100,
+          "channels": 0,
+          "subscriptions": 0,
+          "pubsub_pending_bytes": 0,
+          "pubsub_pending_frames": 0
+        },
+        "memory": {
+          "rss_bytes": 28667904,
+          "peak_rss_bytes": 28270592,
+          "source": "Linux /proc/self/statm and getrusage ru_maxrss"
+        },
+        "sampled_peak_rss_bytes": 28659712,
+        "lag_ns": [
+          14227590,
+          17396188,
+          17353588,
+          17555588,
+          14460090,
+          15548989,
+          15706989,
+          12687690,
+          14525990,
+          13305590,
+          1566095
+        ],
+        "lag_max_ns": 17555588,
+        "cpu_seconds": 1.0628723,
+        "traced_current_bytes": null,
+        "offset": null,
+        "journal_bytes": 0
+      }
+    },
+    {
+      "case": {
+        "command": "INCR",
+        "clients": 100,
+        "keys": 512,
+        "payload_bytes": 1,
+        "mode": "memory"
+      },
+      "correctness": "passed",
+      "settings": {
+        "samples": 3,
+        "operations": 20,
+        "warmup": 4,
+        "minimum_seconds": 0.15
+      },
+      "samples": [
+        {
+          "sample": 0,
+          "operations": 2000,
+          "seconds": 0.15628883299999785,
+          "ops_per_second": 12796.819591071024,
+          "latency": {
+            "count": 2000,
+            "min_ms": 1.684999,
+            "p50_ms": 8.028697,
+            "p95_ms": 8.639696,
+            "p99_ms": 8.832697,
+            "max_ms": 8.899996,
+            "mean_ms": 7.660457675
+          },
+          "server": {
+            "memory": {
+              "rss_bytes": 12546048,
+              "peak_rss_bytes": 12546048,
+              "source": "Linux /proc reference PID RSS/VmHWM"
+            },
+            "cpu_seconds": 0.06,
+            "metrics": null,
+            "lag_ns": [],
+            "lag_max_ns": null,
+            "sampled_peak_rss_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.049999999999999996,
+          "maintenance": null
+        },
+        {
+          "sample": 1,
+          "operations": 2000,
+          "seconds": 0.16052943200000058,
+          "ops_per_second": 12458.774537992464,
+          "latency": {
+            "count": 2000,
+            "min_ms": 1.616099,
+            "p50_ms": 8.000696,
+            "p95_ms": 9.450396,
+            "p99_ms": 9.895295,
+            "max_ms": 10.003296,
+            "mean_ms": 7.8319145575
+          },
+          "server": {
+            "memory": {
+              "rss_bytes": 12546048,
+              "peak_rss_bytes": 12546048,
+              "source": "Linux /proc reference PID RSS/VmHWM"
+            },
+            "cpu_seconds": 0.1,
+            "metrics": null,
+            "lag_ns": [],
+            "lag_max_ns": null,
+            "sampled_peak_rss_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.04000000000000001,
+          "maintenance": null
+        },
+        {
+          "sample": 2,
+          "operations": 2000,
+          "seconds": 0.15898273199999835,
+          "ops_per_second": 12579.982585781836,
+          "latency": {
+            "count": 2000,
+            "min_ms": 2.195999,
+            "p50_ms": 7.971996,
+            "p95_ms": 8.658197,
+            "p99_ms": 9.075396,
+            "max_ms": 9.100596,
+            "mean_ms": 7.7714370295
+          },
+          "server": {
+            "memory": {
+              "rss_bytes": 12546048,
+              "peak_rss_bytes": 12546048,
+              "source": "Linux /proc reference PID RSS/VmHWM"
+            },
+            "cpu_seconds": 0.15,
+            "metrics": null,
+            "lag_ns": [],
+            "lag_max_ns": null,
+            "sampled_peak_rss_bytes": null,
+            "offset": null,
+            "journal_bytes": 0
+          },
+          "server_cpu_seconds": 0.04999999999999999,
+          "maintenance": null
+        }
+      ],
+      "operations": 6000,
+      "ops_per_second": 12610.314055310902,
+      "latency": {
+        "count": 6000,
+        "min_ms": 1.616099,
+        "p50_ms": 8.004397,
+        "p95_ms": 8.996596,
+        "p99_ms": 9.780696,
+        "max_ms": 10.003296,
+        "mean_ms": 7.754603087333334
+      },
+      "engine": "Redis 7.4.12",
+      "final": {
+        "memory": {
+          "rss_bytes": 12554240,
+          "peak_rss_bytes": 12554240,
+          "source": "Linux /proc reference PID RSS/VmHWM"
+        },
+        "cpu_seconds": 0.15,
+        "metrics": null,
+        "lag_ns": [],
+        "lag_max_ns": null,
+        "sampled_peak_rss_bytes": null,
+        "offset": null,
+        "journal_bytes": 0
+      }
+    }
+  ],
+  "elapsed_seconds": 21.454949147
+}

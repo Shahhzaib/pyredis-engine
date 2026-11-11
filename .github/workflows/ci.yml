@@ -1,0 +1,82 @@
+name: release checks
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  python-quick:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.12', '3.13', '3.14']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - run: python -m pip install -e '.[dev]'
+      - run: python scripts/check.py --quick
+
+  full-and-redis:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: python -m pip install -e '.[dev]'
+      - name: Extract official Redis 7.4.12 executable
+        shell: bash
+        run: |
+          set -euo pipefail
+          container=$(docker create redis:7.4.12-bookworm@sha256:2e3eb11462c4e3759e6972678dd051d150ff54b1e60714b3c33b701260172a90)
+          trap 'docker rm -f "$container" >/dev/null' EXIT
+          docker cp "$container":/usr/local/bin/redis-server "$RUNNER_TEMP/redis-server"
+          docker cp "$container":/usr/local/bin/redis-cli "$RUNNER_TEMP/redis-cli"
+          chmod 755 "$RUNNER_TEMP/redis-server" "$RUNNER_TEMP/redis-cli"
+          echo "$RUNNER_TEMP" >> "$GITHUB_PATH"
+          "$RUNNER_TEMP/redis-server" --version
+      - name: Full regression and strict Redis acceptance
+        run: python scripts/check.py --all --require-redis
+        env:
+          PYREDIS_REDIS_SERVER: ${{ runner.temp }}/redis-server
+
+  package-and-image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - name: Build wheel and install into a clean environment
+        run: |
+          python -m pip install --require-hashes -r docker/build-requirements.txt
+          SOURCE_DATE_EPOCH=1704067200 python -m pip wheel --no-build-isolation --no-deps --wheel-dir dist .
+          python -m venv "$RUNNER_TEMP/pyredis-clean"
+          "$RUNNER_TEMP/pyredis-clean/bin/pip" install --no-deps dist/*.whl
+          cd "$RUNNER_TEMP"
+          "$RUNNER_TEMP/pyredis-clean/bin/pyredis-engine" --help
+          "$RUNNER_TEMP/pyredis-clean/bin/python" -c "import pyredis_engine; print(pyredis_engine.__version__)"
+      - name: Build and smoke-test the image
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker build -t pyredis-engine:ci .
+          docker run -d --name pyredis-ci --network none pyredis-engine:ci
+          trap 'docker rm -fv pyredis-ci >/dev/null' EXIT
+          for attempt in $(seq 1 30); do
+            if docker exec pyredis-ci python -c "import socket; s=socket.create_connection(('127.0.0.1',6380),1); s.sendall(b'*1\r\n\$4\r\nPING\r\n'); assert s.makefile('rb').readline()==b'+PONG\r\n'"; then
+              break
+            fi
+            if [ "$attempt" -eq 30 ]; then docker logs pyredis-ci; exit 1; fi
+            sleep 1
+          done
+          test "$(docker exec pyredis-ci id -u)" = 10001
+          docker stop --timeout 10 pyredis-ci

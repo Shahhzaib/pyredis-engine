@@ -1,0 +1,15 @@
+*
+!pyproject.toml
+!README.md
+!LICENSE
+!src/
+!src/**
+!docker/
+!docker/build-requirements.txt
+**/__pycache__/
+**/*.pyc
+**/*.pem
+**/*.key
+**/*.p12
+**/*.pfx
+**/.env
